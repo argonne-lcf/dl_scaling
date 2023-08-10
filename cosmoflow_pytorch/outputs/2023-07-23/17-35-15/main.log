@@ -1,0 +1,15 @@
+[2023-07-23 17:35:15,589][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 6
+[2023-07-23 17:35:15,599][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 10
+[2023-07-23 17:35:15,612][torch.distributed.distributed_c10d][INFO] - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 16 nodes.
+[2023-07-23 17:35:15,599][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 8
+[2023-07-23 17:35:15,599][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 11
+[2023-07-23 17:35:15,599][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 9
+[2023-07-23 17:35:15,628][torch.distributed.distributed_c10d][INFO] - Rank 10: Completed store-based barrier for key:store_based_barrier_key:1 with 16 nodes.
+[2023-07-23 17:35:15,643][torch.distributed.distributed_c10d][INFO] - Rank 9: Completed store-based barrier for key:store_based_barrier_key:1 with 16 nodes.
+[2023-07-23 17:35:15,643][torch.distributed.distributed_c10d][INFO] - Rank 11: Completed store-based barrier for key:store_based_barrier_key:1 with 16 nodes.
+[2023-07-23 17:35:15,643][torch.distributed.distributed_c10d][INFO] - Rank 8: Completed store-based barrier for key:store_based_barrier_key:1 with 16 nodes.
+[2023-07-23 17:35:21,363][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-23 17:35:21,365][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-23 17:35:21,365][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-23 17:35:21,365][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-23 17:35:21,365][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.

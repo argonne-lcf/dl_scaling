@@ -1,0 +1,153 @@
+2022-09-12 11:59:25,573 INFO    MainThread:847 [internal.py:wandb_internal():90] W&B internal server running at pid: 847, started at: 2022-09-12 11:59:25.572811
+2022-09-12 11:59:25,575 INFO    WriterThread:847 [datastore.py:open_for_write():75] open: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/run-11z38ljr.wandb
+2022-09-12 11:59:25,577 DEBUG   SenderThread:847 [sender.py:send():236] send: header
+2022-09-12 11:59:25,577 DEBUG   SenderThread:847 [sender.py:send():236] send: run
+2022-09-12 11:59:25,657 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: check_version
+2022-09-12 11:59:25,671 INFO    SenderThread:847 [dir_watcher.py:__init__():216] watching files in: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files
+2022-09-12 11:59:25,671 INFO    SenderThread:847 [sender.py:_start_run_threads():815] run started: 11z38ljr with start time 1663001964
+2022-09-12 11:59:25,671 DEBUG   SenderThread:847 [sender.py:send():236] send: summary
+2022-09-12 11:59:25,672 INFO    SenderThread:847 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-09-12 11:59:25,672 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: check_version
+2022-09-12 11:59:25,742 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: run_start
+2022-09-12 11:59:25,748 DEBUG   HandlerThread:847 [meta.py:__init__():35] meta init
+2022-09-12 11:59:25,748 DEBUG   HandlerThread:847 [meta.py:__init__():49] meta init done
+2022-09-12 11:59:25,748 DEBUG   HandlerThread:847 [meta.py:probe():209] probe
+2022-09-12 11:59:25,759 DEBUG   HandlerThread:847 [meta.py:_setup_git():199] setup git
+2022-09-12 11:59:25,808 DEBUG   HandlerThread:847 [meta.py:_setup_git():206] setup git done
+2022-09-12 11:59:25,808 DEBUG   HandlerThread:847 [meta.py:_save_pip():53] save pip
+2022-09-12 11:59:25,809 DEBUG   HandlerThread:847 [meta.py:_save_pip():67] save pip done
+2022-09-12 11:59:25,809 DEBUG   HandlerThread:847 [meta.py:_save_conda():74] save conda
+2022-09-12 11:59:26,673 INFO    Thread-7  :847 [dir_watcher.py:_on_file_created():269] file/dir created: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/requirements.txt
+2022-09-12 11:59:26,673 INFO    Thread-7  :847 [dir_watcher.py:_on_file_created():269] file/dir created: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/conda-environment.yaml
+2022-09-12 11:59:26,673 INFO    Thread-7  :847 [dir_watcher.py:_on_file_created():269] file/dir created: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/wandb-summary.json
+2022-09-12 11:59:31,678 INFO    Thread-7  :847 [dir_watcher.py:_on_file_created():269] file/dir created: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/output.log
+2022-09-12 11:59:33,680 INFO    Thread-7  :847 [dir_watcher.py:_on_file_modified():286] file/dir modified: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/output.log
+2022-09-12 11:59:35,155 DEBUG   HandlerThread:847 [meta.py:_save_conda():84] save conda done
+2022-09-12 11:59:35,155 DEBUG   HandlerThread:847 [meta.py:probe():247] probe done
+2022-09-12 11:59:35,477 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: stop_status
+2022-09-12 11:59:35,478 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: stop_status
+2022-09-12 11:59:35,556 DEBUG   SenderThread:847 [sender.py:send():236] send: telemetry
+2022-09-12 11:59:35,556 DEBUG   SenderThread:847 [sender.py:send():236] send: files
+2022-09-12 11:59:35,556 INFO    SenderThread:847 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2022-09-12 11:59:35,682 INFO    Thread-7  :847 [dir_watcher.py:_on_file_modified():286] file/dir modified: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/conda-environment.yaml
+2022-09-12 11:59:35,682 INFO    Thread-7  :847 [dir_watcher.py:_on_file_created():269] file/dir created: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/wandb-metadata.json
+2022-09-12 11:59:35,899 INFO    Thread-11 :847 [upload_job.py:push():138] Uploaded file /var/tmp/pbs.328730.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/tmpwdj0qbf_wandb/10913l4n-wandb-metadata.json
+2022-09-12 11:59:36,092 DEBUG   SenderThread:847 [sender.py:send():236] send: telemetry
+2022-09-12 11:59:37,684 INFO    Thread-7  :847 [dir_watcher.py:_on_file_modified():286] file/dir modified: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/output.log
+2022-09-12 11:59:39,687 INFO    Thread-7  :847 [dir_watcher.py:_on_file_modified():286] file/dir modified: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/output.log
+2022-09-12 11:59:43,690 INFO    Thread-7  :847 [dir_watcher.py:_on_file_modified():286] file/dir modified: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/output.log
+2022-09-12 11:59:46,254 DEBUG   SenderThread:847 [sender.py:send():236] send: telemetry
+2022-09-12 11:59:47,693 INFO    Thread-7  :847 [dir_watcher.py:_on_file_modified():286] file/dir modified: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/output.log
+2022-09-12 11:59:48,605 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: poll_exit
+2022-09-12 11:59:48,606 DEBUG   SenderThread:847 [sender.py:send():236] send: exit
+2022-09-12 11:59:48,606 INFO    SenderThread:847 [sender.py:send_exit():372] handling exit code: 1
+2022-09-12 11:59:48,606 INFO    SenderThread:847 [sender.py:send_exit():374] handling runtime: 22
+2022-09-12 11:59:48,607 INFO    SenderThread:847 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-09-12 11:59:48,607 INFO    SenderThread:847 [sender.py:send_exit():380] send defer
+2022-09-12 11:59:48,607 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: poll_exit
+2022-09-12 11:59:48,608 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: defer
+2022-09-12 11:59:48,608 INFO    HandlerThread:847 [handler.py:handle_request_defer():163] handle defer: 0
+2022-09-12 11:59:48,608 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: defer
+2022-09-12 11:59:48,608 INFO    SenderThread:847 [sender.py:send_request_defer():389] handle sender defer: 0
+2022-09-12 11:59:48,608 INFO    SenderThread:847 [sender.py:transition_state():393] send defer: 1
+2022-09-12 11:59:48,608 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: defer
+2022-09-12 11:59:48,608 INFO    HandlerThread:847 [handler.py:handle_request_defer():163] handle defer: 1
+2022-09-12 11:59:48,695 INFO    Thread-7  :847 [dir_watcher.py:_on_file_modified():286] file/dir modified: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/wandb-summary.json
+2022-09-12 11:59:48,695 INFO    Thread-7  :847 [dir_watcher.py:_on_file_modified():286] file/dir modified: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/output.log
+2022-09-12 11:59:48,721 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: poll_exit
+2022-09-12 11:59:48,721 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: defer
+2022-09-12 11:59:48,721 INFO    SenderThread:847 [sender.py:send_request_defer():389] handle sender defer: 1
+2022-09-12 11:59:48,721 INFO    SenderThread:847 [sender.py:transition_state():393] send defer: 2
+2022-09-12 11:59:48,722 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: poll_exit
+2022-09-12 11:59:48,722 DEBUG   SenderThread:847 [sender.py:send():236] send: stats
+2022-09-12 11:59:48,722 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: defer
+2022-09-12 11:59:48,722 INFO    HandlerThread:847 [handler.py:handle_request_defer():163] handle defer: 2
+2022-09-12 11:59:48,722 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: defer
+2022-09-12 11:59:48,722 INFO    SenderThread:847 [sender.py:send_request_defer():389] handle sender defer: 2
+2022-09-12 11:59:48,722 INFO    SenderThread:847 [sender.py:transition_state():393] send defer: 3
+2022-09-12 11:59:48,722 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: defer
+2022-09-12 11:59:48,723 INFO    HandlerThread:847 [handler.py:handle_request_defer():163] handle defer: 3
+2022-09-12 11:59:48,723 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: defer
+2022-09-12 11:59:48,723 INFO    SenderThread:847 [sender.py:send_request_defer():389] handle sender defer: 3
+2022-09-12 11:59:48,723 INFO    SenderThread:847 [sender.py:transition_state():393] send defer: 4
+2022-09-12 11:59:48,723 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: defer
+2022-09-12 11:59:48,723 INFO    HandlerThread:847 [handler.py:handle_request_defer():163] handle defer: 4
+2022-09-12 11:59:48,723 DEBUG   SenderThread:847 [sender.py:send():236] send: summary
+2022-09-12 11:59:48,724 INFO    SenderThread:847 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-09-12 11:59:48,724 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: defer
+2022-09-12 11:59:48,724 INFO    SenderThread:847 [sender.py:send_request_defer():389] handle sender defer: 4
+2022-09-12 11:59:48,724 INFO    SenderThread:847 [sender.py:transition_state():393] send defer: 5
+2022-09-12 11:59:48,725 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: defer
+2022-09-12 11:59:48,725 INFO    HandlerThread:847 [handler.py:handle_request_defer():163] handle defer: 5
+2022-09-12 11:59:48,725 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: defer
+2022-09-12 11:59:48,725 INFO    SenderThread:847 [sender.py:send_request_defer():389] handle sender defer: 5
+2022-09-12 11:59:48,786 INFO    SenderThread:847 [sender.py:transition_state():393] send defer: 6
+2022-09-12 11:59:48,786 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: defer
+2022-09-12 11:59:48,786 INFO    HandlerThread:847 [handler.py:handle_request_defer():163] handle defer: 6
+2022-09-12 11:59:48,786 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: defer
+2022-09-12 11:59:48,786 INFO    SenderThread:847 [sender.py:send_request_defer():389] handle sender defer: 6
+2022-09-12 11:59:48,786 INFO    SenderThread:847 [dir_watcher.py:finish():353] shutting down directory watcher
+2022-09-12 11:59:48,822 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: poll_exit
+2022-09-12 11:59:49,697 INFO    SenderThread:847 [dir_watcher.py:_on_file_modified():286] file/dir modified: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/config.yaml
+2022-09-12 11:59:49,697 INFO    SenderThread:847 [dir_watcher.py:finish():383] scan: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files
+2022-09-12 11:59:49,698 INFO    SenderThread:847 [dir_watcher.py:finish():397] scan save: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/wandb-summary.json wandb-summary.json
+2022-09-12 11:59:49,698 INFO    SenderThread:847 [dir_watcher.py:finish():397] scan save: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/wandb-metadata.json wandb-metadata.json
+2022-09-12 11:59:49,698 INFO    SenderThread:847 [dir_watcher.py:finish():397] scan save: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/requirements.txt requirements.txt
+2022-09-12 11:59:49,698 INFO    SenderThread:847 [dir_watcher.py:finish():397] scan save: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/config.yaml config.yaml
+2022-09-12 11:59:49,698 INFO    SenderThread:847 [dir_watcher.py:finish():397] scan save: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/output.log output.log
+2022-09-12 11:59:49,698 INFO    SenderThread:847 [dir_watcher.py:finish():397] scan save: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/conda-environment.yaml conda-environment.yaml
+2022-09-12 11:59:49,699 INFO    SenderThread:847 [sender.py:transition_state():393] send defer: 7
+2022-09-12 11:59:49,699 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: poll_exit
+2022-09-12 11:59:49,699 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: defer
+2022-09-12 11:59:49,699 INFO    HandlerThread:847 [handler.py:handle_request_defer():163] handle defer: 7
+2022-09-12 11:59:49,699 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: defer
+2022-09-12 11:59:49,699 INFO    SenderThread:847 [sender.py:send_request_defer():389] handle sender defer: 7
+2022-09-12 11:59:49,699 INFO    SenderThread:847 [file_pusher.py:finish():171] shutting down file pusher
+2022-09-12 11:59:49,799 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: poll_exit
+2022-09-12 11:59:49,800 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: poll_exit
+2022-09-12 11:59:49,901 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: poll_exit
+2022-09-12 11:59:49,901 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: poll_exit
+2022-09-12 11:59:50,002 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: poll_exit
+2022-09-12 11:59:50,002 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: poll_exit
+2022-09-12 11:59:50,067 INFO    Thread-13 :847 [upload_job.py:push():138] Uploaded file /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/requirements.txt
+2022-09-12 11:59:50,076 INFO    Thread-14 :847 [upload_job.py:push():138] Uploaded file /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/config.yaml
+2022-09-12 11:59:50,095 INFO    Thread-16 :847 [upload_job.py:push():138] Uploaded file /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/conda-environment.yaml
+2022-09-12 11:59:50,102 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: poll_exit
+2022-09-12 11:59:50,103 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: poll_exit
+2022-09-12 11:59:50,175 INFO    Thread-15 :847 [upload_job.py:push():138] Uploaded file /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/output.log
+2022-09-12 11:59:50,203 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: poll_exit
+2022-09-12 11:59:50,203 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: poll_exit
+2022-09-12 11:59:50,215 INFO    Thread-12 :847 [upload_job.py:push():138] Uploaded file /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/files/wandb-summary.json
+2022-09-12 11:59:50,304 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: poll_exit
+2022-09-12 11:59:50,304 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: poll_exit
+2022-09-12 11:59:50,405 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: poll_exit
+2022-09-12 11:59:50,405 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: poll_exit
+2022-09-12 11:59:50,415 INFO    Thread-6  :847 [sender.py:transition_state():393] send defer: 8
+2022-09-12 11:59:50,416 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: defer
+2022-09-12 11:59:50,416 INFO    HandlerThread:847 [handler.py:handle_request_defer():163] handle defer: 8
+2022-09-12 11:59:50,416 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: defer
+2022-09-12 11:59:50,416 INFO    SenderThread:847 [sender.py:send_request_defer():389] handle sender defer: 8
+2022-09-12 11:59:50,486 INFO    SenderThread:847 [sender.py:transition_state():393] send defer: 9
+2022-09-12 11:59:50,487 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: defer
+2022-09-12 11:59:50,487 INFO    HandlerThread:847 [handler.py:handle_request_defer():163] handle defer: 9
+2022-09-12 11:59:50,487 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: defer
+2022-09-12 11:59:50,487 INFO    SenderThread:847 [sender.py:send_request_defer():389] handle sender defer: 9
+2022-09-12 11:59:50,487 INFO    SenderThread:847 [sender.py:transition_state():393] send defer: 10
+2022-09-12 11:59:50,487 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: defer
+2022-09-12 11:59:50,487 INFO    HandlerThread:847 [handler.py:handle_request_defer():163] handle defer: 10
+2022-09-12 11:59:50,487 DEBUG   SenderThread:847 [sender.py:send():236] send: final
+2022-09-12 11:59:50,487 DEBUG   SenderThread:847 [sender.py:send():236] send: footer
+2022-09-12 11:59:50,487 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: defer
+2022-09-12 11:59:50,487 INFO    SenderThread:847 [sender.py:send_request_defer():389] handle sender defer: 10
+2022-09-12 11:59:50,506 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: poll_exit
+2022-09-12 11:59:50,506 DEBUG   SenderThread:847 [sender.py:send_request():250] send_request: poll_exit
+2022-09-12 11:59:50,506 INFO    SenderThread:847 [file_pusher.py:join():176] waiting for file pusher
+2022-09-12 11:59:50,756 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: sampled_history
+2022-09-12 11:59:50,756 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: get_summary
+2022-09-12 11:59:50,756 DEBUG   HandlerThread:847 [handler.py:handle_request():140] handle_request: shutdown
+2022-09-12 11:59:50,756 INFO    HandlerThread:847 [handler.py:finish():806] shutting down handler
+2022-09-12 11:59:51,487 INFO    WriterThread:847 [datastore.py:close():279] close: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_115924-11z38ljr/run-11z38ljr.wandb
+2022-09-12 11:59:51,655 INFO    SenderThread:847 [sender.py:finish():1114] shutting down sender
+2022-09-12 11:59:51,656 INFO    SenderThread:847 [file_pusher.py:finish():171] shutting down file pusher
+2022-09-12 11:59:51,656 INFO    SenderThread:847 [file_pusher.py:join():176] waiting for file pusher
+2022-09-12 11:59:51,657 INFO    MainThread:847 [internal.py:handle_exit():80] Internal process exited

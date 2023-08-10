@@ -1,0 +1,15 @@
+[2022-09-16 18:18:37,292][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 668
+[2022-09-16 18:18:37,424][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 125
+[2022-09-16 18:18:37,424][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 126
+[2022-09-16 18:18:37,426][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 127
+[2022-09-16 18:18:37,426][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 124
+[2022-09-16 18:18:37,500][torch.distributed.distributed_c10d][INFO] - Rank 125: Completed store-based barrier for key:store_based_barrier_key:1 with 1024 nodes.
+[2022-09-16 18:18:37,500][torch.distributed.distributed_c10d][INFO] - Rank 126: Completed store-based barrier for key:store_based_barrier_key:1 with 1024 nodes.
+[2022-09-16 18:18:37,500][torch.distributed.distributed_c10d][INFO] - Rank 124: Completed store-based barrier for key:store_based_barrier_key:1 with 1024 nodes.
+[2022-09-16 18:18:37,500][torch.distributed.distributed_c10d][INFO] - Rank 127: Completed store-based barrier for key:store_based_barrier_key:1 with 1024 nodes.
+[2022-09-16 18:18:37,504][torch.distributed.distributed_c10d][INFO] - Rank 668: Completed store-based barrier for key:store_based_barrier_key:1 with 1024 nodes.
+[2022-09-16 18:19:01,269][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2022-09-16 18:19:01,269][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2022-09-16 18:19:01,269][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2022-09-16 18:19:01,269][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2022-09-16 18:19:01,526][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.

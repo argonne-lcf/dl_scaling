@@ -1,0 +1,4 @@
+[2023-07-23 17:31:52,290][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 827
+[2023-07-23 17:31:52,319][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 826
+[2023-07-23 17:31:53,160][torch.distributed.distributed_c10d][INFO] - Rank 827: Completed store-based barrier for key:store_based_barrier_key:1 with 1024 nodes.
+[2023-07-23 17:31:53,164][torch.distributed.distributed_c10d][INFO] - Rank 826: Completed store-based barrier for key:store_based_barrier_key:1 with 1024 nodes.

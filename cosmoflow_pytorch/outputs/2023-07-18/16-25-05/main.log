@@ -1,0 +1,72 @@
+[2023-07-18 16:25:07,324][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 39
+[2023-07-18 16:25:07,324][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 26
+[2023-07-18 16:25:07,324][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 45
+[2023-07-18 16:25:07,325][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 48
+[2023-07-18 16:25:07,324][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 36
+[2023-07-18 16:25:07,325][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 54
+[2023-07-18 16:25:07,325][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 30
+[2023-07-18 16:25:07,324][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 27
+[2023-07-18 16:25:07,324][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 46
+[2023-07-18 16:25:07,325][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 51
+[2023-07-18 16:25:07,324][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 37
+[2023-07-18 16:25:07,325][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 53
+[2023-07-18 16:25:07,325][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 28
+[2023-07-18 16:25:07,324][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 24
+[2023-07-18 16:25:07,324][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 44
+[2023-07-18 16:25:07,325][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 50
+[2023-07-18 16:25:07,324][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 38
+[2023-07-18 16:25:07,325][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 52
+[2023-07-18 16:25:07,347][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 29
+[2023-07-18 16:25:07,324][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 25
+[2023-07-18 16:25:07,324][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 47
+[2023-07-18 16:25:07,325][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 49
+[2023-07-18 16:25:07,325][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 55
+[2023-07-18 16:25:07,347][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 31
+[2023-07-18 16:25:08,333][torch.distributed.distributed_c10d][INFO] - Rank 54: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,334][torch.distributed.distributed_c10d][INFO] - Rank 29: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,334][torch.distributed.distributed_c10d][INFO] - Rank 25: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,338][torch.distributed.distributed_c10d][INFO] - Rank 45: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,339][torch.distributed.distributed_c10d][INFO] - Rank 48: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,340][torch.distributed.distributed_c10d][INFO] - Rank 38: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,337][torch.distributed.distributed_c10d][INFO] - Rank 55: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,334][torch.distributed.distributed_c10d][INFO] - Rank 31: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,338][torch.distributed.distributed_c10d][INFO] - Rank 26: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,338][torch.distributed.distributed_c10d][INFO] - Rank 46: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,340][torch.distributed.distributed_c10d][INFO] - Rank 49: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,340][torch.distributed.distributed_c10d][INFO] - Rank 37: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,338][torch.distributed.distributed_c10d][INFO] - Rank 52: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,334][torch.distributed.distributed_c10d][INFO] - Rank 28: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,343][torch.distributed.distributed_c10d][INFO] - Rank 24: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,338][torch.distributed.distributed_c10d][INFO] - Rank 47: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,340][torch.distributed.distributed_c10d][INFO] - Rank 50: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,342][torch.distributed.distributed_c10d][INFO] - Rank 36: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,338][torch.distributed.distributed_c10d][INFO] - Rank 53: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,343][torch.distributed.distributed_c10d][INFO] - Rank 30: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,343][torch.distributed.distributed_c10d][INFO] - Rank 27: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,338][torch.distributed.distributed_c10d][INFO] - Rank 44: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,341][torch.distributed.distributed_c10d][INFO] - Rank 51: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:08,342][torch.distributed.distributed_c10d][INFO] - Rank 39: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+[2023-07-18 16:25:14,384][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,384][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,384][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,390][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,393][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,394][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,394][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,384][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,384][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,390][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,393][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,394][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,394][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,384][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,384][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,390][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,393][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,394][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,394][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,384][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,391][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,393][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,394][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-18 16:25:14,394][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.

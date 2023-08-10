@@ -1,0 +1,59 @@
+wandb_version: 1
+
+_content:
+  desc: null
+  value:
+    data: '{''batch_size'': 1, ''train_samples'': 2048, ''valid_samples'': 2048, ''dataset'':
+      ''synthetic'', ''apply_log'': True, ''shuffle'': True, ''preshuffle'': False,
+      ''shard_type'': ''local'', ''shard_multiplier'': 1, ''root_dir'': ''/home/hzheng/datascience_grand/mlperf-2022/optimized-hpc-nvidia/cosmoflow/data_small/'',
+      ''stage'': False, ''stage_mode'': ''thread'', ''stage_workers'': 4, ''sample_shape'':
+      [128, 128, 128, 4], ''target_shape'': [4], ''dali_threads'': 4, ''data_layout'':
+      ''NDHWC''}'
+    log: '{''timestamp'': ''ms'', ''experiment_id'': 10000}'
+    model: '{''conv_layer_count'': 5, ''conv_layer_kernel'': 3, ''conv_layer_filters'':
+      32, ''layout'': ''NDHWC'', ''script'': False, ''cuda_graph'': False, ''training'':
+      {''target_score'': 0.124, ''dropout_rate'': 0.5, ''weight_decay'': 0, ''momentum'':
+      0.9, ''amp'': True, ''optimizer'': ''fixed_sgd'', ''lr_sched'': {''lr'': 0.004,
+      ''init_lr'': 0.001, ''warmup_epochs'': 2, ''decay_steps'': [32, 64], ''decay_values'':
+      [0.25, 0.125]}, ''train_epochs'': 20}}'
+    mpi: '{''local_size'': 4}'
+    profile: 'False'
+    wandb: 'True'
+_flags_cache:
+  desc: null
+  value:
+    struct: true
+_metadata:
+  desc: null
+  value: 'ContainerMetadata(ref_type=typing.Any, object_type=<class ''dict''>, optional=True,
+    key=None, flags={''struct'': True}, flags_root=False, resolver_cache=defaultdict(<class
+    ''dict''>, {''now'': {(''%Y-%m-%d'',): ''2022-08-29'', (''%H-%M-%S'',): ''10-59-28''}}),
+    key_type=typing.Any, element_type=typing.Any)'
+_parent:
+  desc: null
+  value: null
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.21
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.13
+    start_time: 1661788769
+    t:
+      1:
+      - 1
+      - 50
+      - 55
+      2:
+      - 1
+      - 50
+      - 55
+      3:
+      - 1
+      - 16
+      4: 3.8.13
+      5: 0.12.21
+      8:
+      - 5

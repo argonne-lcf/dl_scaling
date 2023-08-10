@@ -1,0 +1,7 @@
+:::MLLOG {"namespace": "", "time_ms": 1661805884023, "event_type": "INTERVAL_START", "key": "init_start", "value": null, "metadata": {"file": "./main.py", "lineno": 33, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661805884369, "event_type": "POINT_IN_TIME", "key": "submission_benchmark", "value": "cosmoflow", "metadata": {"file": "./main.py", "lineno": 37, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661805884369, "event_type": "POINT_IN_TIME", "key": "submission_org", "value": "NVIDIA", "metadata": {"file": "./main.py", "lineno": 39, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661805884370, "event_type": "POINT_IN_TIME", "key": "submission_division", "value": "closed", "metadata": {"file": "./main.py", "lineno": 41, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661805884370, "event_type": "POINT_IN_TIME", "key": "submission_status", "value": "onprem", "metadata": {"file": "./main.py", "lineno": 43, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661805884370, "event_type": "POINT_IN_TIME", "key": "submission_platform", "value": "32.0xNVIDIA DGX A100", "metadata": {"file": "./main.py", "lineno": 45, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661805884370, "event_type": "POINT_IN_TIME", "key": "number_of_nodes", "value": 32, "metadata": {"file": "./main.py", "lineno": 48, "instance": 0}}

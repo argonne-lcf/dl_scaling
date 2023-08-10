@@ -1,0 +1,131 @@
+:::MLLOG {"namespace": "", "time_ms": 1663005804026, "event_type": "POINT_IN_TIME", "key": "cache_clear", "value": null, "metadata": {"file": "./main.py", "lineno": 46, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005804408, "event_type": "INTERVAL_START", "key": "init_start", "value": null, "metadata": {"file": "./main.py", "lineno": 47, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005804408, "event_type": "POINT_IN_TIME", "key": "submission_benchmark", "value": "cosmoflow", "metadata": {"file": "./main.py", "lineno": 51, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005804408, "event_type": "POINT_IN_TIME", "key": "submission_org", "value": "NVIDIA", "metadata": {"file": "./main.py", "lineno": 53, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005804408, "event_type": "POINT_IN_TIME", "key": "submission_division", "value": "closed", "metadata": {"file": "./main.py", "lineno": 55, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005804409, "event_type": "POINT_IN_TIME", "key": "submission_status", "value": "onprem", "metadata": {"file": "./main.py", "lineno": 57, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005804409, "event_type": "POINT_IN_TIME", "key": "submission_platform", "value": "16.0xNVIDIA DGX A100", "metadata": {"file": "./main.py", "lineno": 59, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005804409, "event_type": "POINT_IN_TIME", "key": "number_of_nodes", "value": 16, "metadata": {"file": "./main.py", "lineno": 62, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005804409, "event_type": "POINT_IN_TIME", "key": "accelerators_per_node", "value": 4, "metadata": {"file": "./main.py", "lineno": 64, "instance": 0}}
+[2022-09-12 13:03:27,117][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2022-09-12 13:03:27,137][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 64 nodes.
+:::MLLOG {"namespace": "", "time_ms": 1663005807315, "event_type": "POINT_IN_TIME", "key": "dropout", "value": 0.5, "metadata": {"file": "./main.py", "lineno": 110, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005809097, "event_type": "POINT_IN_TIME", "key": "opt_weight_decay", "value": 0, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 63, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005809100, "event_type": "POINT_IN_TIME", "key": "opt_name", "value": "sgd", "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 65, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005809100, "event_type": "POINT_IN_TIME", "key": "opt_base_learning_rate", "value": 0.008, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 96, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005809100, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_warmup_epochs", "value": 4, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 98, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005809100, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_warmup_factor", "value": 8, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 100, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005809101, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_decay_boundary_epochs", "value": [32, 64], "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 102, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005809101, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_decay_factor", "value": [0.25, 0.125], "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 104, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005809101, "event_type": "POINT_IN_TIME", "key": "global_batch_size", "value": 64, "metadata": {"file": "./main.py", "lineno": 124, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005809101, "event_type": "POINT_IN_TIME", "key": "train_samples", "value": 524288, "metadata": {"file": "./main.py", "lineno": 126, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005809101, "event_type": "POINT_IN_TIME", "key": "eval_samples", "value": 65536, "metadata": {"file": "./main.py", "lineno": 128, "instance": 0}}
+[2022-09-12 13:03:33,281][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+:::MLLOG {"namespace": "", "time_ms": 1663005824495, "event_type": "INTERVAL_END", "key": "init_stop", "value": null, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/utils/utils.py", "lineno": 216, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005824511, "event_type": "INTERVAL_START", "key": "run_start", "value": null, "metadata": {"file": "./main.py", "lineno": 148, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1663005824512, "event_type": "INTERVAL_START", "key": "staging_start", "value": null, "metadata": {"file": "./main.py", "lineno": 151, "instance": 0}}
+Staging non distributed files (8192)
+Staging non distributed files (1024)
+/home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/plugin/base_iterator.py:192: Warning: Please set `reader_name` and don't set last_batch_padded and size manually whenever possible. This may lead, in some situations, to missing some samples or returning duplicated ones. Check the Sharding section of the documentation for more details.
+  _iterator_deprecation_warning()
+Error executing job with overrides: ['++data.stage=/dev/shm', '+mpi.local_size=4', '+wandb=True']
+Traceback (most recent call last):
+  File "./main.py", line 213, in main
+    return CosmoflowMain(cfg).exec()
+  File "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/utils/app.py", line 37, in exec
+    return self.run()
+  File "./main.py", line 168, in run
+    train_iterator = iter(self._training_pipeline)
+  File "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/data/dali_core.py", line 83, in __iter__
+    return InputMultiplierIter(self._pipeline,
+  File "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/data/dali_core.py", line 61, in __init__
+    self._dali_iterator = dali_pytorch.DALIGenericIterator(
+  File "/home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/plugin/pytorch.py", line 183, in __init__
+    _DaliBaseIterator.__init__(self,
+  File "/home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/plugin/base_iterator.py", line 199, in __init__
+    p.build()
+  File "/home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/pipeline.py", line 827, in build
+    self._pipe.Build(self._generate_build_args())
+RuntimeError: Critical error when building pipeline:
+Error when constructing operator: readers___TFRecord encountered:
+[/opt/dali/dali/operators/reader/loader/indexed_file_loader.h:105] Assert on "fin.good()" failed: Failed to open file /dev/shm/train/21929749_univ_ics_2019-03_a3979546_052.tfrecord.idx
+Stacktrace (76 entries):
+[frame 0]: /home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali_operators.so(+0x5a6262) [0x14dd9b8c0262]
+[frame 1]: /home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali_operators.so(+0x336a6fd) [0x14dd9e6846fd]
+[frame 2]: /home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali_operators.so(+0x3369bf9) [0x14dd9e683bf9]
+[frame 3]: /home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali_operators.so(+0x335c4e9) [0x14dd9e6764e9]
+[frame 4]: /home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali_operators.so(+0x336daf8) [0x14dd9e687af8]
+[frame 5]: /home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali_operators.so(+0x336e002) [0x14dd9e688002]
+[frame 6]: /home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali_operators.so(std::_Function_handler<std::unique_ptr<dali::OperatorBase, std::default_delete<dali::OperatorBase> > (dali::OpSpec const&), std::unique_ptr<dali::OperatorBase, std::default_delete<dali::OperatorBase> > (*)(dali::OpSpec const&)>::_M_invoke(std::_Any_data const&, dali::OpSpec const&)+0xc) [0x14dd9b8b955c]
+[frame 7]: /home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali.so(+0x159281) [0x14ddd0ba7281]
+[frame 8]: /home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali.so(dali::InstantiateOperator(dali::OpSpec const&)+0x264) [0x14ddd0ba4914]
+[frame 9]: /home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali.so(dali::OpGraph::InstantiateOperators()+0x9a) [0x14ddd0b5bf3a]
+[frame 10]: /home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali.so(dali::Pipeline::Build(std::vector<dali::PipelineOutputDesc, std::allocator<dali::PipelineOutputDesc> >)+0xa08) [0x14ddd0bc0e18]
+[frame 11]: /home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/backend_impl.cpython-38-x86_64-linux-gnu.so(+0x5ec52) [0x14ddbd0bcc52]
+[frame 12]: /home/hzheng/.local/polaris/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/backend_impl.cpython-38-x86_64-linux-gnu.so(+0xa7c15) [0x14ddbd105c15]
+[frame 13]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(+0x13c00e) [0x564ae89b000e]
+[frame 14]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyObject_MakeTpCall+0x3bf) [0x564ae89a513f]
+[frame 15]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(+0x166ca0) [0x564ae89daca0]
+[frame 16]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x4f83) [0x564ae8a4f923]
+[frame 17]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalCodeWithName+0x260) [0x564ae8a40600]
+[frame 18]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x534) [0x564ae8a41b64]
+[frame 19]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x4c0) [0x564ae8a4ae60]
+[frame 20]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalCodeWithName+0x260) [0x564ae8a40600]
+[frame 21]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x594) [0x564ae8a41bc4]
+[frame 22]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x1510) [0x564ae8a4beb0]
+[frame 23]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalCodeWithName+0x260) [0x564ae8a40600]
+[frame 24]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x594) [0x564ae8a41bc4]
+[frame 25]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(+0x1b97da) [0x564ae8a2d7da]
+[frame 26]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyObject_MakeTpCall+0x228) [0x564ae89a4fa8]
+[frame 27]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x546a) [0x564ae8a4fe0a]
+[frame 28]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalCodeWithName+0x260) [0x564ae8a40600]
+[frame 29]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x594) [0x564ae8a41bc4]
+[frame 30]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(+0x1b9698) [0x564ae8a2d698]
+[frame 31]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyObject_MakeTpCall+0x228) [0x564ae89a4fa8]
+[frame 32]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x4eff) [0x564ae8a4f89f]
+[frame 33]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x1b7) [0x564ae8a417e7]
+[frame 34]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(+0x13bc92) [0x564ae89afc92]
+[frame 35]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(+0x17958e) [0x564ae89ed58e]
+[frame 36]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(PyObject_GetIter+0x13) [0x564ae89ac0d3]
+[frame 37]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(+0x13b23d) [0x564ae89af23d]
+[frame 38]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x71b) [0x564ae8a4b0bb]
+[frame 39]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x1b7) [0x564ae8a417e7]
+[frame 40]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x4c0) [0x564ae8a4ae60]
+[frame 41]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x1b7) [0x564ae8a417e7]
+[frame 42]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x4c0) [0x564ae8a4ae60]
+[frame 43]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x1b7) [0x564ae8a417e7]
+[frame 44]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x71b) [0x564ae8a4b0bb]
+[frame 45]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalCodeWithName+0x260) [0x564ae8a40600]
+[frame 46]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x594) [0x564ae8a41bc4]
+[frame 47]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x1510) [0x564ae8a4beb0]
+[frame 48]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalCodeWithName+0x260) [0x564ae8a40600]
+[frame 49]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x594) [0x564ae8a41bc4]
+[frame 50]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(+0x166b2e) [0x564ae89dab2e]
+[frame 51]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x1510) [0x564ae8a4beb0]
+[frame 52]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalCodeWithName+0xd5f) [0x564ae8a410ff]
+[frame 53]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x594) [0x564ae8a41bc4]
+[frame 54]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x71b) [0x564ae8a4b0bb]
+[frame 55]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x1b7) [0x564ae8a417e7]
+[frame 56]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x71b) [0x564ae8a4b0bb]
+[frame 57]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalCodeWithName+0xd5f) [0x564ae8a410ff]
+[frame 58]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x594) [0x564ae8a41bc4]
+[frame 59]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x1510) [0x564ae8a4beb0]
+[frame 60]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalCodeWithName+0xd5f) [0x564ae8a410ff]
+[frame 61]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x594) [0x564ae8a41bc4]
+[frame 62]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x1510) [0x564ae8a4beb0]
+[frame 63]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalCodeWithName+0xd5f) [0x564ae8a410ff]
+[frame 64]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyFunction_Vectorcall+0x594) [0x564ae8a41bc4]
+[frame 65]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalFrameDefault+0x71b) [0x564ae8a4b0bb]
+[frame 66]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(_PyEval_EvalCodeWithName+0x260) [0x564ae8a40600]
+[frame 67]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(PyEval_EvalCode+0x23) [0x564ae8a41eb3]
+[frame 68]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(+0x242622) [0x564ae8ab6622]
+[frame 69]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(+0x2531d2) [0x564ae8ac71d2]
+[frame 70]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(+0x25636b) [0x564ae8aca36b]
+[frame 71]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(PyRun_SimpleFileExFlags+0x1bf) [0x564ae8aca54f]
+[frame 72]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(Py_RunMain+0x3a9) [0x564ae8acaa29]
+[frame 73]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(Py_BytesMain+0x39) [0x564ae8acac29]
+[frame 74]: /lib64/libc.so.6(__libc_start_main+0xed) [0x14de439c434d]
+[frame 75]: /var/run/palsd/dbaaf0cc-46e7-4f2d-bb6d-0a187d614031/files/python(+0x1f9ad7) [0x564ae8a6dad7]
+Current pipeline object is no longer valid.
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+:::MLLOG {"namespace": "", "time_ms": 1663006333913, "event_type": "INTERVAL_END", "key": "staging_stop", "value": null, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/utils/utils.py", "lineno": 216, "staging_duration": 509.40091156959534, "instance": 0}}

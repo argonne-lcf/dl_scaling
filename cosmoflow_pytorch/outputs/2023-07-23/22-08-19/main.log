@@ -1,0 +1,30 @@
+[2023-07-23 22:08:22,503][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 506
+[2023-07-23 22:08:22,510][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 504
+[2023-07-23 22:08:22,513][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 443
+[2023-07-23 22:08:22,515][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 209
+[2023-07-23 22:08:22,514][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 441
+[2023-07-23 22:08:22,515][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 208
+[2023-07-23 22:08:22,534][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 211
+[2023-07-23 22:08:22,536][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 210
+[2023-07-23 22:08:23,499][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 505
+[2023-07-23 22:08:23,512][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 507
+[2023-07-23 22:08:23,553][torch.distributed.distributed_c10d][INFO] - Rank 505: Completed store-based barrier for key:store_based_barrier_key:1 with 512 nodes.
+[2023-07-23 22:08:23,553][torch.distributed.distributed_c10d][INFO] - Rank 507: Completed store-based barrier for key:store_based_barrier_key:1 with 512 nodes.
+[2023-07-23 22:08:23,558][torch.distributed.distributed_c10d][INFO] - Rank 506: Completed store-based barrier for key:store_based_barrier_key:1 with 512 nodes.
+[2023-07-23 22:08:23,559][torch.distributed.distributed_c10d][INFO] - Rank 504: Completed store-based barrier for key:store_based_barrier_key:1 with 512 nodes.
+[2023-07-23 22:08:23,560][torch.distributed.distributed_c10d][INFO] - Rank 443: Completed store-based barrier for key:store_based_barrier_key:1 with 512 nodes.
+[2023-07-23 22:08:23,560][torch.distributed.distributed_c10d][INFO] - Rank 208: Completed store-based barrier for key:store_based_barrier_key:1 with 512 nodes.
+[2023-07-23 22:08:23,560][torch.distributed.distributed_c10d][INFO] - Rank 441: Completed store-based barrier for key:store_based_barrier_key:1 with 512 nodes.
+[2023-07-23 22:08:23,560][torch.distributed.distributed_c10d][INFO] - Rank 209: Completed store-based barrier for key:store_based_barrier_key:1 with 512 nodes.
+[2023-07-23 22:08:23,560][torch.distributed.distributed_c10d][INFO] - Rank 211: Completed store-based barrier for key:store_based_barrier_key:1 with 512 nodes.
+[2023-07-23 22:08:23,560][torch.distributed.distributed_c10d][INFO] - Rank 210: Completed store-based barrier for key:store_based_barrier_key:1 with 512 nodes.
+[2023-07-23 22:08:29,830][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-23 22:08:29,830][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-23 22:08:29,830][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-23 22:08:29,830][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-23 22:08:29,924][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-23 22:08:29,943][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-23 22:08:29,924][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-23 22:08:29,943][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-23 22:08:29,943][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2023-07-23 22:08:29,943][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.

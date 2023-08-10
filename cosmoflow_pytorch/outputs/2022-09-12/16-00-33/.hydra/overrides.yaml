@@ -1,0 +1,3 @@
+- +mpi.local_size=4
+- ++data.stage=/dev/shm
+- +log.timestamp=ms

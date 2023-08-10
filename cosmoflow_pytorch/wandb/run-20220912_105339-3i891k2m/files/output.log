@@ -1,0 +1,27 @@
+:::MLLOG {"namespace": "", "time_ms": 1662998026078, "event_type": "POINT_IN_TIME", "key": "cache_clear", "value": null, "metadata": {"file": "./main.py", "lineno": 46, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1662998026447, "event_type": "INTERVAL_START", "key": "init_start", "value": null, "metadata": {"file": "./main.py", "lineno": 47, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1662998026447, "event_type": "POINT_IN_TIME", "key": "submission_benchmark", "value": "cosmoflow", "metadata": {"file": "./main.py", "lineno": 51, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1662998026447, "event_type": "POINT_IN_TIME", "key": "submission_org", "value": "NVIDIA", "metadata": {"file": "./main.py", "lineno": 53, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1662998026447, "event_type": "POINT_IN_TIME", "key": "submission_division", "value": "closed", "metadata": {"file": "./main.py", "lineno": 55, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1662998026447, "event_type": "POINT_IN_TIME", "key": "submission_status", "value": "onprem", "metadata": {"file": "./main.py", "lineno": 57, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1662998026447, "event_type": "POINT_IN_TIME", "key": "submission_platform", "value": "1.0xNVIDIA DGX A100", "metadata": {"file": "./main.py", "lineno": 59, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1662998026447, "event_type": "POINT_IN_TIME", "key": "number_of_nodes", "value": 1, "metadata": {"file": "./main.py", "lineno": 62, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1662998026447, "event_type": "POINT_IN_TIME", "key": "accelerators_per_node", "value": 4, "metadata": {"file": "./main.py", "lineno": 64, "instance": 0}}
+Error executing job with overrides: ['++data.stage=/dev/shm', '+mpi.local_size=4', '+wandb=True']
+Traceback (most recent call last):
+  File "./main.py", line 210, in main
+    return CosmoflowMain(cfg).exec()
+  File "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/utils/app.py", line 36, in exec
+    self.setup()
+  File "./main.py", line 96, in setup
+    self._training_pipeline, self._validation_pipeline = TFRecordDataPipeline.build(config=self._config["data"],
+  File "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/data/dali_tfr_gzip.py", line 182, in build
+    return (TFRecordDataPipeline(config, distenv, "train",
+  File "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/data/dali_tfr_gzip.py", line 51, in __init__
+    self._prepare_file_list()
+  File "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/data/dali_tfr_gzip.py", line 98, in _prepare_file_list
+    data_filenames, file_sizes = _load_file_list(
+  File "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/data/dali_tfr_gzip.py", line 196, in _load_file_list
+    file_name, size = line.split(" ")
+ValueError: not enough values to unpack (expected 2, got 1)
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

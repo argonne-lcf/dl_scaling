@@ -1,0 +1,15 @@
+[2022-08-29 10:59:36,880][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 2
+[2022-08-29 10:59:36,959][torch.distributed.distributed_c10d][INFO] - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+[2022-08-29 10:59:41,764][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+/home/hzheng/.local/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/plugin/base_iterator.py:192: Warning: Please set `reader_name` and don't set last_batch_padded and size manually whenever possible. This may lead, in some situations, to missing some samples or returning duplicated ones. Check the Sharding section of the documentation for more details.
+  _iterator_deprecation_warning()
+Error executing job with overrides: ['+wandb=True', '+mpi.local_size=4']
+Traceback (most recent call last):
+  File "main.py", line 182, in main
+    return CosmoflowMain(cfg).exec()
+  File "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/utils/app.py", line 24, in exec
+    return self.run()
+  File "main.py", line 161, in run
+    wandb.log({"score": last_score, "epoch": epoch, "epoch_time": t1 - t0})
+NameError: name 'wandb' is not defined
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

@@ -1,0 +1,6 @@
+- +mpi.local_size=4
+- +log.timestamp=ms_2
+- +log.experiment_id=558397.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+- ++data.train_samples=256
+- ++data.valid_samples=64
+- ++data.dataset=synthetic

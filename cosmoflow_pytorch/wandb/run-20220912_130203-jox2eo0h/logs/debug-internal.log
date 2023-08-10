@@ -1,0 +1,53 @@
+2022-09-12 13:02:04,737 INFO    MainThread:55999 [internal.py:wandb_internal():90] W&B internal server running at pid: 55999, started at: 2022-09-12 13:02:04.736941
+2022-09-12 13:02:04,739 INFO    WriterThread:55999 [datastore.py:open_for_write():75] open: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/run-jox2eo0h.wandb
+2022-09-12 13:02:04,741 DEBUG   SenderThread:55999 [sender.py:send():236] send: header
+2022-09-12 13:02:04,741 DEBUG   SenderThread:55999 [sender.py:send():236] send: run
+2022-09-12 13:02:04,828 DEBUG   HandlerThread:55999 [handler.py:handle_request():140] handle_request: check_version
+2022-09-12 13:02:04,842 INFO    SenderThread:55999 [dir_watcher.py:__init__():216] watching files in: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files
+2022-09-12 13:02:04,842 INFO    SenderThread:55999 [sender.py:_start_run_threads():815] run started: jox2eo0h with start time 1663005723
+2022-09-12 13:02:04,842 DEBUG   SenderThread:55999 [sender.py:send():236] send: summary
+2022-09-12 13:02:04,843 INFO    SenderThread:55999 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-09-12 13:02:04,843 DEBUG   SenderThread:55999 [sender.py:send_request():250] send_request: check_version
+2022-09-12 13:02:04,913 DEBUG   HandlerThread:55999 [handler.py:handle_request():140] handle_request: run_start
+2022-09-12 13:02:04,917 DEBUG   HandlerThread:55999 [meta.py:__init__():35] meta init
+2022-09-12 13:02:04,917 DEBUG   HandlerThread:55999 [meta.py:__init__():49] meta init done
+2022-09-12 13:02:04,917 DEBUG   HandlerThread:55999 [meta.py:probe():209] probe
+2022-09-12 13:02:04,924 DEBUG   HandlerThread:55999 [meta.py:_setup_git():199] setup git
+2022-09-12 13:02:04,984 DEBUG   HandlerThread:55999 [meta.py:_setup_git():206] setup git done
+2022-09-12 13:02:04,984 DEBUG   HandlerThread:55999 [meta.py:_save_pip():53] save pip
+2022-09-12 13:02:04,986 DEBUG   HandlerThread:55999 [meta.py:_save_pip():67] save pip done
+2022-09-12 13:02:04,986 DEBUG   HandlerThread:55999 [meta.py:_save_conda():74] save conda
+2022-09-12 13:02:05,844 INFO    Thread-7  :55999 [dir_watcher.py:_on_file_created():269] file/dir created: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/conda-environment.yaml
+2022-09-12 13:02:05,844 INFO    Thread-7  :55999 [dir_watcher.py:_on_file_created():269] file/dir created: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/wandb-summary.json
+2022-09-12 13:02:05,844 INFO    Thread-7  :55999 [dir_watcher.py:_on_file_created():269] file/dir created: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/requirements.txt
+2022-09-12 13:02:10,855 INFO    Thread-7  :55999 [dir_watcher.py:_on_file_created():269] file/dir created: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/output.log
+2022-09-12 13:02:12,347 DEBUG   HandlerThread:55999 [meta.py:_save_conda():84] save conda done
+2022-09-12 13:02:12,347 DEBUG   HandlerThread:55999 [meta.py:probe():247] probe done
+2022-09-12 13:02:12,646 DEBUG   HandlerThread:55999 [handler.py:handle_request():140] handle_request: stop_status
+2022-09-12 13:02:12,646 DEBUG   SenderThread:55999 [sender.py:send_request():250] send_request: stop_status
+2022-09-12 13:02:12,731 DEBUG   SenderThread:55999 [sender.py:send():236] send: telemetry
+2022-09-12 13:02:12,731 DEBUG   SenderThread:55999 [sender.py:send():236] send: files
+2022-09-12 13:02:12,731 INFO    SenderThread:55999 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2022-09-12 13:02:12,857 INFO    Thread-7  :55999 [dir_watcher.py:_on_file_modified():286] file/dir modified: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/conda-environment.yaml
+2022-09-12 13:02:12,857 INFO    Thread-7  :55999 [dir_watcher.py:_on_file_created():269] file/dir created: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/wandb-metadata.json
+2022-09-12 13:02:13,097 INFO    Thread-11 :55999 [upload_job.py:push():138] Uploaded file /var/tmp/pbs.328725.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/tmpbyejadlswandb/3uf8pauu-wandb-metadata.json
+2022-09-12 13:02:13,747 WARNING MainThread:55999 [internal.py:is_dead():387] Internal process exiting, parent pid 51582 disappeared
+2022-09-12 13:02:13,747 ERROR   MainThread:55999 [internal.py:wandb_internal():149] Internal process shutdown.
+2022-09-12 13:02:14,649 INFO    HandlerThread:55999 [handler.py:finish():806] shutting down handler
+2022-09-12 13:02:14,649 INFO    WriterThread:55999 [datastore.py:close():279] close: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/run-jox2eo0h.wandb
+2022-09-12 13:02:14,732 INFO    SenderThread:55999 [sender.py:finish():1114] shutting down sender
+2022-09-12 13:02:14,732 INFO    SenderThread:55999 [dir_watcher.py:finish():353] shutting down directory watcher
+2022-09-12 13:02:14,858 INFO    SenderThread:55999 [dir_watcher.py:finish():383] scan: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files
+2022-09-12 13:02:14,859 INFO    SenderThread:55999 [dir_watcher.py:finish():397] scan save: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/wandb-summary.json wandb-summary.json
+2022-09-12 13:02:14,859 INFO    SenderThread:55999 [dir_watcher.py:finish():397] scan save: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/wandb-metadata.json wandb-metadata.json
+2022-09-12 13:02:14,859 INFO    SenderThread:55999 [dir_watcher.py:finish():397] scan save: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/requirements.txt requirements.txt
+2022-09-12 13:02:14,859 INFO    SenderThread:55999 [dir_watcher.py:finish():397] scan save: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/config.yaml config.yaml
+2022-09-12 13:02:14,859 INFO    SenderThread:55999 [dir_watcher.py:finish():397] scan save: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/output.log output.log
+2022-09-12 13:02:14,859 INFO    SenderThread:55999 [dir_watcher.py:finish():397] scan save: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/conda-environment.yaml conda-environment.yaml
+2022-09-12 13:02:14,859 INFO    SenderThread:55999 [file_pusher.py:finish():171] shutting down file pusher
+2022-09-12 13:02:14,859 INFO    SenderThread:55999 [file_pusher.py:join():176] waiting for file pusher
+2022-09-12 13:02:15,211 INFO    Thread-13 :55999 [upload_job.py:push():138] Uploaded file /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/requirements.txt
+2022-09-12 13:02:15,250 INFO    Thread-15 :55999 [upload_job.py:push():138] Uploaded file /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/conda-environment.yaml
+2022-09-12 13:02:15,257 INFO    Thread-12 :55999 [upload_job.py:push():138] Uploaded file /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/wandb-summary.json
+2022-09-12 13:02:15,261 INFO    Thread-14 :55999 [upload_job.py:push():138] Uploaded file /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220912_130203-jox2eo0h/files/config.yaml
+2022-09-12 13:02:15,931 INFO    MainThread:55999 [internal.py:handle_exit():80] Internal process exited

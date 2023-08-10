@@ -1,0 +1,43 @@
+:::MLLOG {"namespace": "", "time_ms": 1661788776531, "event_type": "INTERVAL_START", "key": "init_start", "value": null, "metadata": {"file": "main.py", "lineno": 32, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788776844, "event_type": "POINT_IN_TIME", "key": "submission_benchmark", "value": "cosmoflow", "metadata": {"file": "main.py", "lineno": 36, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788776844, "event_type": "POINT_IN_TIME", "key": "submission_org", "value": "NVIDIA", "metadata": {"file": "main.py", "lineno": 38, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788776844, "event_type": "POINT_IN_TIME", "key": "submission_division", "value": "closed", "metadata": {"file": "main.py", "lineno": 40, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788776844, "event_type": "POINT_IN_TIME", "key": "submission_status", "value": "onprem", "metadata": {"file": "main.py", "lineno": 42, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788776844, "event_type": "POINT_IN_TIME", "key": "submission_platform", "value": "1.0xNVIDIA DGX A100", "metadata": {"file": "main.py", "lineno": 44, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788776844, "event_type": "POINT_IN_TIME", "key": "number_of_nodes", "value": 1, "metadata": {"file": "main.py", "lineno": 47, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788776844, "event_type": "POINT_IN_TIME", "key": "accelerators_per_node", "value": 4, "metadata": {"file": "main.py", "lineno": 49, "instance": 0}}
+[2022-08-29 10:59:36,919][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2022-08-29 10:59:36,959][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+:::MLLOG {"namespace": "", "time_ms": 1661788778887, "event_type": "POINT_IN_TIME", "key": "dropout", "value": 0.5, "metadata": {"file": "main.py", "lineno": 95, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788779924, "event_type": "POINT_IN_TIME", "key": "opt_weight_decay", "value": 0, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 50, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788779924, "event_type": "POINT_IN_TIME", "key": "opt_name", "value": "sgd", "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 52, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788779925, "event_type": "POINT_IN_TIME", "key": "opt_base_learning_rate", "value": 0.004, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 83, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788779925, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_warmup_epochs", "value": 2, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 85, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788779925, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_warmup_factor", "value": 4, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 87, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788779925, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_decay_boundary_epochs", "value": [32, 64], "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 89, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788779925, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_decay_factor", "value": [0.25, 0.125], "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 91, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788779925, "event_type": "POINT_IN_TIME", "key": "global_batch_size", "value": 4, "metadata": {"file": "main.py", "lineno": 109, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788779925, "event_type": "POINT_IN_TIME", "key": "train_samples", "value": 2048, "metadata": {"file": "main.py", "lineno": 111, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788779925, "event_type": "POINT_IN_TIME", "key": "eval_samples", "value": 2048, "metadata": {"file": "main.py", "lineno": 113, "instance": 0}}
+[2022-08-29 10:59:41,764][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+/home/hzheng/.local/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/plugin/base_iterator.py:192: Warning: Please set `reader_name` and don't set last_batch_padded and size manually whenever possible. This may lead, in some situations, to missing some samples or returning duplicated ones. Check the Sharding section of the documentation for more details.
+  _iterator_deprecation_warning()
+:::MLLOG {"namespace": "", "time_ms": 1661788784146, "event_type": "INTERVAL_END", "key": "init_stop", "value": null, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/utils/utils.py", "lineno": 201, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788784146, "event_type": "INTERVAL_START", "key": "run_start", "value": null, "metadata": {"file": "main.py", "lineno": 133, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788784473, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/trainer.py", "lineno": 159, "epoch_num": 1, "lr": [0.001], "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788809179, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/trainer.py", "lineno": 166, "epoch_num": 1, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788821810, "event_type": "INTERVAL_START", "key": "eval_stop", "value": null, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/trainer.py", "lineno": 170, "epoch_num": 1, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788821810, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/utils/utils.py", "lineno": 201, "epoch_num": 1, "training_epoch_latency": 24703.498046875, "eval_epoch_latency": 12630.451171875, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788821810, "event_type": "POINT_IN_TIME", "key": "tracked_stats", "value": {"throughput": 21223.229155853194}, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/trainer.py", "lineno": 179, "epoch_num": 1, "step": 0, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661788821810, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": NaN, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/trainer.py", "lineno": 184, "epoch_num": 1, "instance": 0}}
+Epoch [0]: 37.33749628 	 score:        nan
+Error executing job with overrides: ['+wandb=True', '+mpi.local_size=4']
+Traceback (most recent call last):
+  File "main.py", line 182, in main
+    return CosmoflowMain(cfg).exec()
+  File "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/utils/app.py", line 24, in exec
+    return self.run()
+  File "main.py", line 161, in run
+    wandb.log({"score": last_score, "epoch": epoch, "epoch_time": t1 - t0})
+NameError: name 'wandb' is not defined
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

@@ -1,0 +1,40 @@
+2022-08-29 11:02:07,008 INFO    MainThread:12620 [wandb_setup.py:_flush():76] Configure stats pid to 12620
+2022-08-29 11:02:07,008 INFO    MainThread:12620 [wandb_setup.py:_flush():76] Loading settings from /home/hzheng/.config/wandb/settings
+2022-08-29 11:02:07,008 INFO    MainThread:12620 [wandb_setup.py:_flush():76] Loading settings from /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/settings
+2022-08-29 11:02:07,008 INFO    MainThread:12620 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'api_key': '***REDACTED***'}
+2022-08-29 11:02:07,008 INFO    MainThread:12620 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'cosmoflow/pytorch/main.py', 'program': 'main.py'}
+2022-08-29 11:02:07,008 INFO    MainThread:12620 [wandb_init.py:_log_setup():461] Logging user logs to /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220829_110206-3ergjnuz/logs/debug.log
+2022-08-29 11:02:07,008 INFO    MainThread:12620 [wandb_init.py:_log_setup():462] Logging internal logs to /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220829_110206-3ergjnuz/logs/debug-internal.log
+2022-08-29 11:02:07,008 INFO    MainThread:12620 [wandb_init.py:init():495] calling init triggers
+2022-08-29 11:02:07,009 INFO    MainThread:12620 [wandb_init.py:init():498] wandb.init called with sweep_config: {}
+config: {'_metadata': ContainerMetadata(ref_type=typing.Any, object_type=<class 'dict'>, optional=True, key=None, flags={'struct': True}, flags_root=False, resolver_cache=defaultdict(<class 'dict'>, {'now': {('%Y-%m-%d',): '2022-08-29', ('%H-%M-%S',): '11-02-06'}}), key_type=typing.Any, element_type=typing.Any), '_parent': None, '_flags_cache': {'struct': True}, '_content': {'model': {'conv_layer_count': 5, 'conv_layer_kernel': 3, 'conv_layer_filters': 32, 'layout': 'NDHWC', 'script': False, 'cuda_graph': False, 'training': {'target_score': 0.124, 'dropout_rate': 0.5, 'weight_decay': 0, 'momentum': 0.9, 'amp': True, 'optimizer': 'fixed_sgd', 'lr_sched': {'lr': 0.004, 'init_lr': 0.001, 'warmup_epochs': 2, 'decay_steps': [32, 64], 'decay_values': [0.25, 0.125]}, 'train_epochs': 20}}, 'data': {'batch_size': 1, 'train_samples': 2048, 'valid_samples': 2048, 'dataset': 'synthetic', 'apply_log': True, 'shuffle': True, 'preshuffle': False, 'shard_type': 'local', 'shard_multiplier': 1, 'root_dir': '/home/hzheng/datascience_grand/mlperf-2022/optimized-hpc-nvidia/cosmoflow/data_small/', 'stage': False, 'stage_mode': 'thread', 'stage_workers': 4, 'sample_shape': [128, 128, 128, 4], 'target_shape': [4], 'dali_threads': 4, 'data_layout': 'NDHWC'}, 'profile': False, 'log': {'timestamp': 'ms', 'experiment_id': 10000}, 'wandb': True, 'mpi': {'local_size': 4}}}
+2022-08-29 11:02:07,009 INFO    MainThread:12620 [wandb_init.py:init():548] starting backend
+2022-08-29 11:02:07,009 INFO    MainThread:12620 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-08-29 11:02:07,016 INFO    MainThread:12620 [backend.py:ensure_launched():217] starting backend process...
+2022-08-29 11:02:07,022 INFO    MainThread:12620 [backend.py:ensure_launched():222] started backend process with pid: 13231
+2022-08-29 11:02:07,029 INFO    MainThread:12620 [wandb_init.py:init():558] backend started and connected
+2022-08-29 11:02:07,038 INFO    MainThread:12620 [wandb_init.py:init():634] updated telemetry
+2022-08-29 11:02:07,083 INFO    MainThread:12620 [wandb_init.py:init():665] communicating run to backend with 30 second timeout
+2022-08-29 11:02:08,493 INFO    MainThread:12620 [wandb_run.py:_on_init():1919] communicating current version
+2022-08-29 11:02:08,563 INFO    MainThread:12620 [wandb_run.py:_on_init():1923] got version response upgrade_message: "wandb version 0.13.2 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-08-29 11:02:08,563 INFO    MainThread:12620 [wandb_init.py:init():700] starting run threads in backend
+2022-08-29 11:02:11,551 WARNING MainThread:12620 [wandb_init.py:init():1064] interrupted
+Traceback (most recent call last):
+  File "/soft/datascience/conda/2022-07-19/mconda3/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 1043, in init
+    run = wi.init()
+  File "/soft/datascience/conda/2022-07-19/mconda3/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 711, in init
+    _ = backend.interface.communicate_run_start(run_obj)
+  File "/soft/datascience/conda/2022-07-19/mconda3/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 234, in communicate_run_start
+    result = self._communicate_run_start(run_start)
+  File "/soft/datascience/conda/2022-07-19/mconda3/lib/python3.8/site-packages/wandb/sdk/interface/interface_shared.py", line 440, in _communicate_run_start
+    result = self._communicate(rec)
+  File "/soft/datascience/conda/2022-07-19/mconda3/lib/python3.8/site-packages/wandb/sdk/interface/interface_shared.py", line 226, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/soft/datascience/conda/2022-07-19/mconda3/lib/python3.8/site-packages/wandb/sdk/interface/router.py", line 37, in get
+    is_set = self._object_ready.wait(timeout)
+  File "/soft/datascience/conda/2022-07-19/mconda3/lib/python3.8/threading.py", line 558, in wait
+    signaled = self._cond.wait(timeout)
+  File "/soft/datascience/conda/2022-07-19/mconda3/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

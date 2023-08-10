@@ -1,0 +1,4 @@
+- +mpi.local_size=4
+- ++data.stage=/dev/shm
+- +log.timestamp=ms_1024
+- +log.experiment_id=330290.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov

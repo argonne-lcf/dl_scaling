@@ -1,0 +1,29 @@
+{
+    "os": "Linux-5.3.18-57-default-x86_64-with-glibc2.17",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-09-01T01:02:26.760060",
+    "startedAt": "2022-09-01T01:02:25.123257",
+    "docker": null,
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "gpu_count": 4,
+    "cpu_count": 64,
+    "cuda": null,
+    "args": [
+        "+mpi.local_size=4",
+        "+wandb=True",
+        "--config-name",
+        "test_128x4x1"
+    ],
+    "state": "running",
+    "program": "./main.py",
+    "codePath": "cosmoflow/pytorch/main.py",
+    "git": {
+        "remote": "https://zhenghh04:@gitlab.com/nvidia-mlperf-hpc/optimized-hpc.git",
+        "commit": "555364e31f2f9a4ca0f2684492161d4cb4157de3"
+    },
+    "email": "huihuo.zheng@anl.gov",
+    "root": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc",
+    "host": "x3006c0s13b1n0",
+    "username": "hzheng",
+    "executable": "/var/run/palsd/436404ec-8c77-4f6d-be21-a484a8e689ba/files/python"
+}

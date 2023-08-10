@@ -1,0 +1,30 @@
+2022-08-29 10:53:45,479 INFO    MainThread:19436 [wandb_setup.py:_flush():76] Configure stats pid to 19436
+2022-08-29 10:53:45,480 INFO    MainThread:19436 [wandb_setup.py:_flush():76] Loading settings from /home/hzheng/.config/wandb/settings
+2022-08-29 10:53:45,480 INFO    MainThread:19436 [wandb_setup.py:_flush():76] Loading settings from /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/settings
+2022-08-29 10:53:45,480 INFO    MainThread:19436 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'api_key': '***REDACTED***'}
+2022-08-29 10:53:45,480 INFO    MainThread:19436 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'cosmoflow/pytorch/main.py', 'program': 'main.py'}
+2022-08-29 10:53:45,480 INFO    MainThread:19436 [wandb_init.py:_log_setup():461] Logging user logs to /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220829_105345-5/logs/debug.log
+2022-08-29 10:53:45,480 INFO    MainThread:19436 [wandb_init.py:_log_setup():462] Logging internal logs to /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220829_105345-5/logs/debug-internal.log
+2022-08-29 10:53:45,480 INFO    MainThread:19436 [wandb_init.py:init():495] calling init triggers
+2022-08-29 10:53:45,480 INFO    MainThread:19436 [wandb_init.py:init():498] wandb.init called with sweep_config: {}
+config: {'_metadata': ContainerMetadata(ref_type=typing.Any, object_type=<class 'dict'>, optional=True, key=None, flags={'struct': True}, flags_root=False, resolver_cache=defaultdict(<class 'dict'>, {'now': {('%Y-%m-%d',): '2022-08-29', ('%H-%M-%S',): '10-53-44'}}), key_type=typing.Any, element_type=typing.Any), '_parent': None, '_flags_cache': {'struct': True}, '_content': {'model': {'conv_layer_count': 5, 'conv_layer_kernel': 3, 'conv_layer_filters': 32, 'layout': 'NDHWC', 'script': False, 'cuda_graph': True, 'training': {'target_score': 0.124, 'dropout_rate': 0.5, 'weight_decay': 0, 'momentum': 0.9, 'amp': True, 'optimizer': 'fixed_sgd', 'lr_sched': {'lr': 0.004, 'init_lr': 0.001, 'warmup_epochs': 4, 'decay_steps': [16, 32], 'decay_values': [0.25, 0.125]}, 'train_epochs': 25}}, 'data': {'batch_size': 1, 'dataset': 'cosmoflow_npy', 'apply_log': True, 'shuffle': True, 'preshuffle': True, 'shard_type': 'local', 'shard_multiplier': 1, 'root_dir': '/home/hzheng/datascience_grand/mlperf_hpc/hpc-nvidia/datasets/cosmoflow/cosmoUniverse_2019_05_4parE_npy/', 'stage': False, 'stage_mode': 'thread', 'stage_workers': 32, 'sample_shape': [128, 128, 128, 4], 'target_shape': [4], 'dali_threads': 4, 'data_layout': 'NDHWC'}, 'profile': False, 'log': {'timestamp': 'ms', 'experiment_id': 10000}, 'wandb': {'run_tag': 5}}}
+2022-08-29 10:53:45,481 INFO    MainThread:19436 [wandb_init.py:init():548] starting backend
+2022-08-29 10:53:45,481 INFO    MainThread:19436 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-08-29 10:53:45,495 INFO    MainThread:19436 [backend.py:ensure_launched():217] starting backend process...
+2022-08-29 10:53:45,501 INFO    MainThread:19436 [backend.py:ensure_launched():222] started backend process with pid: 20512
+2022-08-29 10:53:45,502 INFO    MainThread:19436 [wandb_init.py:init():558] backend started and connected
+2022-08-29 10:53:45,505 INFO    MainThread:19436 [wandb_init.py:init():634] updated telemetry
+2022-08-29 10:53:45,589 INFO    MainThread:19436 [wandb_init.py:init():665] communicating run to backend with 30 second timeout
+2022-08-29 10:53:45,600 ERROR   MainThread:19436 [wandb_init.py:init():1070] error
+Traceback (most recent call last):
+  File "/soft/datascience/conda/2022-07-19/mconda3/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 1043, in init
+    run = wi.init()
+  File "/soft/datascience/conda/2022-07-19/mconda3/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 668, in init
+    run_result = backend.interface.communicate_run(
+  File "/soft/datascience/conda/2022-07-19/mconda3/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 222, in communicate_run
+    run = self._make_run(run_obj)
+  File "/soft/datascience/conda/2022-07-19/mconda3/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 172, in _make_run
+    run._make_proto_run(proto_run)
+  File "/soft/datascience/conda/2022-07-19/mconda3/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 647, in _make_proto_run
+    run.run_id = self._run_id
+TypeError: 5 has type int, but expected one of: bytes, unicode

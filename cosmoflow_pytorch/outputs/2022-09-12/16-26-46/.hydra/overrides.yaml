@@ -1,0 +1,6 @@
+- ++data.stage=False
+- +mpi.local_size=4
+- ++data.train_samples=4096
+- ++data.valid_samples=512
+- +log.timestamp=ms_
+- +log.experiment_id=328841.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov

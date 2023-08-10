@@ -1,0 +1,60 @@
+:::MLLOG {"namespace": "", "time_ms": 1661801552770, "event_type": "INTERVAL_START", "key": "init_start", "value": null, "metadata": {"file": "./main.py", "lineno": 33, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801552977, "event_type": "POINT_IN_TIME", "key": "submission_benchmark", "value": "cosmoflow", "metadata": {"file": "./main.py", "lineno": 37, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801552978, "event_type": "POINT_IN_TIME", "key": "submission_org", "value": "NVIDIA", "metadata": {"file": "./main.py", "lineno": 39, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801552978, "event_type": "POINT_IN_TIME", "key": "submission_division", "value": "closed", "metadata": {"file": "./main.py", "lineno": 41, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801552978, "event_type": "POINT_IN_TIME", "key": "submission_status", "value": "onprem", "metadata": {"file": "./main.py", "lineno": 43, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801552978, "event_type": "POINT_IN_TIME", "key": "submission_platform", "value": "32.0xNVIDIA DGX A100", "metadata": {"file": "./main.py", "lineno": 45, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801552978, "event_type": "POINT_IN_TIME", "key": "number_of_nodes", "value": 32, "metadata": {"file": "./main.py", "lineno": 48, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801552978, "event_type": "POINT_IN_TIME", "key": "accelerators_per_node", "value": 4, "metadata": {"file": "./main.py", "lineno": 50, "instance": 0}}
+[2022-08-29 14:32:34,654][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2022-08-29 14:32:34,654][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 128 nodes.
+:::MLLOG {"namespace": "", "time_ms": 1661801555967, "event_type": "POINT_IN_TIME", "key": "dropout", "value": 0.5, "metadata": {"file": "./main.py", "lineno": 96, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801557271, "event_type": "POINT_IN_TIME", "key": "opt_weight_decay", "value": 0, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 50, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801557271, "event_type": "POINT_IN_TIME", "key": "opt_name", "value": "sgd", "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 52, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801557271, "event_type": "POINT_IN_TIME", "key": "opt_base_learning_rate", "value": 0.008, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 83, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801557272, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_warmup_epochs", "value": 4, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 85, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801557272, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_warmup_factor", "value": 8, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 87, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801557272, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_decay_boundary_epochs", "value": [32, 64], "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 89, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801557272, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_decay_factor", "value": [0.25, 0.125], "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/optimizer.py", "lineno": 91, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801557272, "event_type": "POINT_IN_TIME", "key": "global_batch_size", "value": 128, "metadata": {"file": "./main.py", "lineno": 110, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801557273, "event_type": "POINT_IN_TIME", "key": "train_samples", "value": 262144, "metadata": {"file": "./main.py", "lineno": 112, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801557273, "event_type": "POINT_IN_TIME", "key": "eval_samples", "value": 65536, "metadata": {"file": "./main.py", "lineno": 114, "instance": 0}}
+[2022-08-29 14:32:42,662][torch.nn.parallel.distributed][INFO] - Reducer buckets have been rebuilt in this iteration.
+/home/hzheng/.local/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/plugin/base_iterator.py:192: Warning: Please set `reader_name` and don't set last_batch_padded and size manually whenever possible. This may lead, in some situations, to missing some samples or returning duplicated ones. Check the Sharding section of the documentation for more details.
+  _iterator_deprecation_warning()
+:::MLLOG {"namespace": "", "time_ms": 1661801569784, "event_type": "INTERVAL_END", "key": "init_stop", "value": null, "metadata": {"file": "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/utils/utils.py", "lineno": 201, "instance": 0}}
+:::MLLOG {"namespace": "", "time_ms": 1661801569785, "event_type": "INTERVAL_START", "key": "run_start", "value": null, "metadata": {"file": "./main.py", "lineno": 134, "instance": 0}}
+Error executing job with overrides: ['+mpi.local_size=4', '+wandb=True']
+Traceback (most recent call last):
+  File "./main.py", line 196, in main
+    return CosmoflowMain(cfg).exec()
+  File "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/utils/app.py", line 24, in exec
+    return self.run()
+  File "./main.py", line 151, in run
+    train_iterator = iter(self._training_pipeline)
+  File "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/data/dali_core.py", line 70, in __iter__
+    return InputMultiplierIter(self._pipeline,
+  File "/lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/data/dali_core.py", line 48, in __init__
+    self._dali_iterator = dali_pytorch.DALIGenericIterator(
+  File "/home/hzheng/.local/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/plugin/pytorch.py", line 196, in __init__
+    self._first_batch = DALIGenericIterator.__next__(self)
+  File "/home/hzheng/.local/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/plugin/pytorch.py", line 213, in __next__
+    outputs = self._get_outputs()
+  File "/home/hzheng/.local/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/plugin/base_iterator.py", line 297, in _get_outputs
+    outputs.append(p.share_outputs())
+  File "/home/hzheng/.local/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/pipeline.py", line 997, in share_outputs
+    return self._pipe.ShareOutputs()
+RuntimeError: Critical error in pipeline:
+Error when executing CPU operator readers___TFRecord encountered:
+[/opt/dali/dali/operators/reader/loader/indexed_file_loader.h:76] Assert on "p != nullptr" failed: Error reading from a file /home/hzheng/datascience_grand/mlperf-2022/optimized-hpc/datasets/cosmoflow/cosmoUniverse_2019_05_4parE_tf_gzip/train/univ_ics_2019-03_a12202845_040.tfrecord
+Stacktrace (8 entries):
+[frame 0]: /home/hzheng/.local/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali_operators.so(+0x5a6262) [0x147d838c0262]
+[frame 1]: /home/hzheng/.local/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali_operators.so(+0x336be2d) [0x147d86685e2d]
+[frame 2]: /home/hzheng/.local/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali_operators.so(+0x336360c) [0x147d8667d60c]
+[frame 3]: /home/hzheng/.local/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali_operators.so(+0x33640d4) [0x147d8667e0d4]
+[frame 4]: /home/hzheng/.local/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali_operators.so(+0x3362318) [0x147d8667c318]
+[frame 5]: /home/hzheng/.local/conda/2022-07-19/lib/python3.8/site-packages/nvidia/dali/libdali_operators.so(+0x3bcdf0f) [0x147d86ee7f0f]
+[frame 6]: /lib64/libpthread.so.0(+0x894a) [0x147e311b694a]
+[frame 7]: /lib64/libc.so.6(clone+0x3f) [0x147e30ed9d0f]
+Current pipeline object is no longer valid.
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

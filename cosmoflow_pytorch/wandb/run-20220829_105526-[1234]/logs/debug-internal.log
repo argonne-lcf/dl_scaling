@@ -1,0 +1,10 @@
+2022-08-29 10:55:27,468 INFO    MainThread:31890 [internal.py:wandb_internal():90] W&B internal server running at pid: 31890, started at: 2022-08-29 10:55:27.467901
+2022-08-29 10:55:27,470 INFO    WriterThread:31890 [datastore.py:open_for_write():75] open: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220829_105526-[1234]/run-[1234].wandb
+2022-08-29 10:55:27,472 DEBUG   SenderThread:31890 [sender.py:send():236] send: header
+2022-08-29 10:55:35,618 WARNING MainThread:31890 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2022-08-29 10:55:36,620 WARNING MainThread:31890 [internal.py:is_dead():387] Internal process exiting, parent pid 31309 disappeared
+2022-08-29 10:55:36,620 ERROR   MainThread:31890 [internal.py:wandb_internal():149] Internal process shutdown.
+2022-08-29 10:55:37,472 INFO    WriterThread:31890 [datastore.py:close():279] close: /lus/grand/projects/datascience/hzheng/mlperf-2022/optimized-hpc/cosmoflow/pytorch/wandb/run-20220829_105526-[1234]/run-[1234].wandb
+2022-08-29 10:55:37,473 INFO    SenderThread:31890 [sender.py:finish():1114] shutting down sender
+2022-08-29 10:55:37,480 INFO    HandlerThread:31890 [handler.py:finish():806] shutting down handler
+2022-08-29 10:55:37,481 INFO    MainThread:31890 [internal.py:handle_exit():80] Internal process exited
