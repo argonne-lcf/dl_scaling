@@ -1,3 +1,63 @@
+# VLTVG-PyTorch with DDP and Horovod
+
+This repository contains the PyTorch implementations using Distributed Data Parallel (DDP) and Horovod for Cosmoflow. These implementations are intended for usage with the [ALCF](https://alcf.anl.gov). Follow the instructions below to get started.
+
+## 1. Dataset Preparation
+The original data used is test-tfr-256. Run gen_data.py to argument the data to 20992 samples
+
+## 2. Environment Setup
+Load the Conda environment using the following commands:
+```bash
+module load conda/2022-07-19; conda activate
+```
+Get libboost (not included in the script below) and setup environment variables:
+```bash
+export TMPDIR=./results
+export MPICH_GPU_SUPPORT_ENABLED=0
+export LD_LIBRARY_PATH=/grand/datascience/zhaozhenghao/tools/libboost:$LD_LIBRARY_PATH
+```
+Create and activate the Python virtual environment, and install required packages:
+```bash
+# Create Python virtual environment
+python -m venv --system-site-packages cosmoflow
+source cosmoflow/bin/activate
+```
+Install necessary packages:
+```bash
+# install mlperf-logging
+pip install "git+https://github.com/mlperf/logging.git"
+export PYTHONPATH=/grand/datascience/zhaozhenghao/envs/cosmoflow/lib/python3.8/site-packages/:$PYTHONPATH
+
+# install nvidia
+pip install --extra-index-url https://developer.download.nvidia.com/compute/redist --upgrade nvidia-dali-cuda110
+
+# install apex
+git clone https://github.com/NVIDIA/apex
+cd apex
+pip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --global-option="--cpp_ext" --global-option="--cuda_ext" ./
+```
+
+## 3. Running with Different Implementations
+### PyTorch DDP
+```bash
+source ./setup.sh
+
+aprun -n 8 -N 4 python ./main.py +mpi.local_size=4 ++data.stage=/local/scratch/ +log.timestamp=ms_2_ddp +log.experiment_id=${PBS_JOBID} --config-name test_tfr
+```
+
+### Horovod
+```bash
+source ./setup.sh
+
+aprun -n 8 -N 4 python ./main.py +mpi.local_size=4 ++data.stage=/local/scratch/ +log.timestamp=ms_2_hvd +log.experiment_id=${PBS_JOBID} --config-name test_tfr
+```
+
+## Additional Information
+
+For additional examples, refer to the [r2.sc](r2.sc) (for PyTorch DDP) and [r2_hvd.sc](r2_hvd.sc) (for Horovod). Update directories and configurations accordingly for your specific setup.
+
+## Below is [Cosmoflow benchmark](https://arxiv.org/abs/1808.04728)'s original README:
+---
 # Cosmoflow benchmark implementation
 
 This repository contains PyTorch implementation of the Cosmoflow: Using Deep Learning to learn the universe at scale benchmark for MLPerf purpose.

@@ -1,3 +1,69 @@
+# VLTVG-PyTorch with DDP, Horovod, and DeepSpeed
+
+This repository contains the PyTorch implementations using Distributed Data Parallel (DDP), Horovod, and DeepSpeed for [Improving Visual Grounding with Visual-Linguistic Verification and Iterative Reasoning](https://arxiv.org/abs/2205.00272). These implementations are intended for usage with the [ALCF](https://alcf.anl.gov). Follow the instructions below to get started.
+
+## Common Setup
+
+### 1. Dataset Preparation
+Prepare the datasets as instructed in the [VLTVG repository](https://github.com/yangli18/VLTVG).
+
+### 2. Conda Environment Setup
+Load the Conda environment using the following commands:
+```bash
+# For PyTorch and Horovod
+module load conda 
+conda activate
+
+# For DeepSpeed
+module load conda/2023-01-10-unstable
+conda activate
+```
+
+### 3. Python Virtual Environment Setup
+#### First Time Setup:
+Create and activate the Python virtual environment, and install required packages:
+```bash
+# Create Python virtual environment
+python -m venv --system-site-packages vltvg
+source vltvg/bin/activate
+
+# Install required packages
+pip install -r requirements.txt
+```
+#### Activations:
+Activate the virtual environment using:
+```bash
+source vltvg/bin/activate
+```
+
+## Running with Different Implementations
+### PyTorch DDP
+```bash
+aprun -n 8 -N 4 python train_ddp.py --config configs/VLTVG_R101_referit_ddp.py --checkpoint_latest --checkpoint_best
+```
+
+### Horovod
+```bash
+aprun -n 8 -N 4 python train_hvd.py --config configs/VLTVG_R101_referit_ddp.py --checkpoint_latest --checkpoint_best
+```
+
+### DeepSpeed
+```bash
+mpiexec --verbose \
+  --envall -n 8 \
+  --ppn 4 \
+  --hostfile "${PBS_NODEFILE}" python train_ds.py \
+  --config configs/VLTVG_R101_referit_ddp.py --polaris_nodes 2 \
+  --checkpoint_latest --checkpoint_best \
+  --deepspeed_config scripts/deepspeed/ds_config.json
+```
+
+## Additional Information
+
+For additional examples, refer to the [scripts](scripts/) folder. Update directories and configurations accordingly for your specific setup.
+
+## Below is [VLTVG](https://github.com/yangli18/VLTVG)'s original README:
+---
 Improving Visual Grounding with Visual-Linguistic Verification and Iterative Reasoning
 ========
 This is the official implementation of [Improving Visual Grounding with Visual-Linguistic Verification and Iterative Reasoning](https://arxiv.org/abs/2205.00272).
