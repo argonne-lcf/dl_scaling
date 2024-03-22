@@ -1,0 +1,101 @@
+With ICPX
+
+(/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c2s2b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> make clean
+(/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c2s2b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> make
+icpx    -c -o cpu_allreduce_test.o cpu_allreduce_test.cpp
+icpx -O2 -g -o cpu_allreduce_test cpu_allreduce_test.o \
+/soft/compilers/oneapi/2023.12.15.001/oneapi/ccl/2021.11/lib/libccl.so.1 \
+/soft/restricted/CNDA/updates/2023.12.15.001/oneapi/compiler/2024.0/lib/libsycl.so.7.0.0
+(/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c2s2b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> mpiexec --np 4 -ppn 4 ./cpu_allreduce_test
+2024:03:05-23:42:58:(177987) |CCL_WARN| PMIx_Init failed: PMIX_ERR_UNREACH
+2024:03:05-23:42:58:(177987) |CCL_WARN| could not get local_idx/count from environment variables, trying to get them from ATL
+2024:03:05-23:42:58:(177987) |CCL_ERROR| global.cpp:185 set_local_coord: condition global_data::env().ze_ipc_exchange == ccl::ze::ipc_exchange_mode::sockets failed
+to get local_idx/count from ATL, set CCL_ZE_IPC_EXCHANGE=sockets explicitly
+terminate called after throwing an instance of 'ccl::v1::exception'
+  what():  oneCCL: global.cpp:185 set_local_coord: EXCEPTION: to get local_idx/count from ATL, set CCL_ZE_IPC_EXCHANGE=sockets explicitly 
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 177986 RUNNING AT x4213c2s2b0n0.hostmgmt2213.cm.aurora.alcf.anl.gov
+=   KILLED BY SIGNAL: 6 (Aborted)
+===================================================================================
+
+WITH G++
+
+kaushikvelusamy@x4213c2s2b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> module load PrgEnv-gnu
+kaushikvelusamy@x4213c2s2b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> which g++
+/opt/cray/pe/gcc/12.2.0/snos/bin/g++
+kaushikvelusamy@x4213c2s2b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> make clean
+kaushikvelusamy@x4213c2s2b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> make
+g++    -c -o cpu_allreduce_test.o cpu_allreduce_test.cpp
+g++ -O2 -g -o cpu_allreduce_test cpu_allreduce_test.o \
+/soft/compilers/oneapi/2023.12.15.001/oneapi/ccl/2021.11/lib/libccl.so.1 \
+/soft/restricted/CNDA/updates/2023.12.15.001/oneapi/compiler/2024.0/lib/libsycl.so.7.0.0
+kaushikvelusamy@x4213c2s2b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> 
+kaushikvelusamy@x4213c2s2b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> 
+kaushikvelusamy@x4213c2s2b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> mpiexec --np 4 -ppn 4 ./cpu_allreduce_test
+2024:03:05-23:46:13:(180498) |CCL_WARN| PMIx_Init failed: PMIX_ERR_UNREACH
+2024:03:05-23:46:13:(180498) |CCL_WARN| could not get local_idx/count from environment variables, trying to get them from ATL
+2024:03:05-23:46:13:(180498) |CCL_ERROR| global.cpp:185 set_local_coord: condition global_data::env().ze_ipc_exchange == ccl::ze::ipc_exchange_mode::sockets failed
+to get local_idx/count from ATL, set CCL_ZE_IPC_EXCHANGE=sockets explicitly
+terminate called after throwing an instance of 'ccl::v1::exception'
+  what():  oneCCL: global.cpp:185 set_local_coord: EXCEPTION: to get local_idx/count from ATL, set CCL_ZE_IPC_EXCHANGE=sockets explicitly 
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 180495 RUNNING AT x4213c2s2b0n0.hostmgmt2213.cm.aurora.alcf.anl.gov
+=   KILLED BY SIGNAL: 6 (Aborted)
+===================================================================================
+
+
+
+
+
+
+(/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c6s7b0n0:/gecko/CSC250STDM10_CNDA/kaushik> export LD_LIBRARY_PATH=/soft/compilers/oneapi/2023.12.15.001/oneapi/ccl/2021.11/lib:$LD_LIBRARY_PATH
+(/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c6s7b0n0:/gecko/CSC250STDM10_CNDA/kaushik> source /soft/compilers/oneapi/2023.12.15.001/oneapi/ccl/latest/env/vars.sh
+(/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c6s7b0n0:/gecko/CSC250STDM10_CNDA/kaushik> mpiexec --np 4 -ppn 4 ./cpu_allreduce_test
+[proxy:0:0@x4213c6s7b0n0] HYD_spawn (../../../../../src/pm/i_hydra/libhydra/spawn/intel/hydra_spawn.c:152): execvp error on file ./cpu_allreduce_test (No such file or directory)
+[proxy:0:0@x4213c6s7b0n0] HYD_spawn (../../../../../src/pm/i_hydra/libhydra/spawn/intel/hydra_spawn.c:152): execvp error on file ./cpu_allreduce_test (No such file or directory)
+[proxy:0:0@x4213c6s7b0n0] HYD_spawn (../../../../../src/pm/i_hydra/libhydra/spawn/intel/hydra_spawn.c:152): execvp error on file ./cpu_allreduce_test (No such file or directory)
+(/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c6s7b0n0:/gecko/CSC250STDM10_CNDA/kaushik> cd /gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init
+(/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c6s7b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> mpiexec --np 4 -ppn 4 ./cpu_allreduce_test
+2024:03:05-23:53:39:(181045) |CCL_WARN| PMIx_Init failed: PMIX_ERR_UNREACH
+2024:03:05-23:53:39:(181045) |CCL_WARN| could not get local_idx/count from environment variables, trying to get them from ATL
+2024:03:05-23:53:39:(181043) |CCL_ERROR| global.cpp:185 set_local_coord: condition global_data::env().ze_ipc_exchange == ccl::ze::ipc_exchange_mode::sockets failed
+to get local_idx/count from ATL, set CCL_ZE_IPC_EXCHANGE=sockets explicitly
+terminate called after throwing an instance of 'ccl::v1::exception'
+what():    what():  oneCCL: global.cpp:185 set_local_coord: EXCEPTION: to get local_idx/count from ATL, set CCL_ZE_IPC_EXCHANGE=sockets explicitly
+oneCCL: global.cpp:185 set_local_coord: EXCEPTION: to get local_idx/count from ATL, set CCL_ZE_IPC_EXCHANGE=sockets explicitly
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 181043 RUNNING AT x4213c6s7b0n0.hostmgmt2213.cm.aurora.alcf.anl.gov
+=   KILLED BY SIGNAL: 6 (Aborted)
+===================================================================================
+ (/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c6s7b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> 
+
+
+WITH G++ 
+
+===================================================================================
+(/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c6s7b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> module load PrgEnv-gnu
+(/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c6s7b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> which g++
+/opt/cray/pe/gcc/12.2.0/snos/bin/g++
+(/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c6s7b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> make clean
+(/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c6s7b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> make
+g++    -c -o cpu_allreduce_test.o cpu_allreduce_test.cpp
+g++ -O2 -g -o cpu_allreduce_test cpu_allreduce_test.o \
+/soft/compilers/oneapi/2023.12.15.001/oneapi/ccl/2021.11/lib/libccl.so.1 \
+/soft/restricted/CNDA/updates/2023.12.15.001/oneapi/compiler/2024.0/lib/libsycl.so.7.0.0
+(/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c6s7b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init>  mpiexec --np 4 -ppn 4 ./cpu_allreduce_test
+2024:03:05-23:56:08:(181401) |CCL_WARN| PMIx_Init failed: PMIX_ERR_UNREACH
+2024:03:05-23:56:08:(181401) |CCL_WARN| could not get local_idx/count from environment variables, trying to get them from ATL
+2024:03:05-23:56:08:(181401) |CCL_ERROR| global.cpp:185 set_local_coord: condition global_data::env().ze_ipc_exchange == ccl::ze::ipc_exchange_mode::sockets failed
+to get local_idx/count from ATL, set CCL_ZE_IPC_EXCHANGE=sockets explicitly
+terminate called after throwing an instance of 'ccl::v1::exception'
+  what():  oneCCL: global.cpp:185 set_local_coord: EXCEPTION: to get local_idx/count from ATL, set CCL_ZE_IPC_EXCHANGE=sockets explicitly
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 181398 RUNNING AT x4213c6s7b0n0.hostmgmt2213.cm.aurora.alcf.anl.gov
+=   KILLED BY SIGNAL: 6 (Aborted)
+===================================================================================
+
+(/soft/datascience/aurora_nre_models_frameworks-2024.0_u1) kaushikvelusamy@x4213c6s7b0n0:/gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/all_reduce_bulk_for/baseline_one_ccl_init> 

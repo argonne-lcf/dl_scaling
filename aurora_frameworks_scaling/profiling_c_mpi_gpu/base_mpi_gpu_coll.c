@@ -1,0 +1,94 @@
+// To compile make file=filename
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <mpi.h>
+#include <omp.h>
+
+int main(int argc, char * argv[])
+{
+    int rank, nranks;
+    double t1, t2, t3, t4;
+    long int li;
+    long long int p1, p2, values[2], c1, c2, i1, i2;
+    int N_AllRed[2] = { 8, 2048 }, N_AllMax = 2048, N_AllBst[2] = { 16, 8192 }, N_BstMax = 8192;
+    
+    MPI_Init( &argc, &argv ); 
+    MPI_Comm_rank( MPI_COMM_WORLD, &rank );
+    MPI_Comm_size( MPI_COMM_WORLD, &nranks );
+
+    int device_id = rank;
+    printf("device_id %d .\n", device_id);
+
+    size_t bytes = 1024 * 1024 * sizeof(int);
+    int * __restrict s_reduce;
+    int * __restrict r_reduce;
+
+    s_reduce = (int *) omp_target_alloc_device(bytes, device_id);
+    r_reduce = (int *) omp_target_alloc_device(bytes, device_id);
+    
+    if (r_reduce == NULL || s_reduce == NULL)
+    {
+     printf(" ERROR: Cannot allocate space for A using omp_target_alloc().\n");
+     exit(1);
+    }
+ 
+  #pragma omp target teams distribute parallel for is_device_ptr(s_reduce, r_reduce)
+  {
+    for ( int i = 0; i < 1024; i++ )
+    {
+        for ( int j = 0; j < 1024; j++ )
+        {
+            s_reduce[i*1024 + j] = 1;
+            r_reduce[i*1024 + j] = 0;
+        }
+    }
+}
+    for ( int i = 0; i < 1; i++ )
+    {
+        for ( int j = 0; j < 8; j++ )
+        {
+            printf( "Before all_reduce Rank %2d value of r_reduce   : %i \n", rank,  r_reduce[i * 1024 + j] );
+            printf( "Before all_reduce Rank %2d value of s_reduce   : %i \n", rank,  s_reduce[i * 1024 + j] );
+        }
+    }
+    
+    MPI_Barrier( MPI_COMM_WORLD ); 
+    t1 = MPI_Wtime();
+
+    MPI_Allreduce( s_reduce, r_reduce, 1024, MPI_INT, MPI_SUM, MPI_COMM_WORLD );
+
+    t2 = MPI_Wtime();
+    MPI_Barrier( MPI_COMM_WORLD ); 
+
+       if ( rank == 0 )   printf("First all reduce time : %8.4lf \n", ( t2 - t1 ) * 1e6 / (double)1000 );
+
+
+    MPI_Barrier( MPI_COMM_WORLD ); 
+    t3 = MPI_Wtime();
+
+    MPI_Allreduce( s_reduce, r_reduce, 1024, MPI_INT, MPI_SUM, MPI_COMM_WORLD );
+
+    MPI_Barrier( MPI_COMM_WORLD ); 
+    t4 = MPI_Wtime();
+    
+        if ( rank == 0 )  printf("Second all reduce time : %8.4lf \n", ( t4 - t3 ) * 1e6 / (double)1000 );
+
+
+    for ( int i = 0; i < 1; i++ )
+    {
+        for ( int j = 0; j < 8; j++ )
+        {
+            printf( "After all_reduce Rank %2d value of r_reduce   : %i \n", rank,  r_reduce[i * 1024 + j] );
+            printf( "After all_reduce Rank %2d value of s_reduce   : %i \n", rank,  s_reduce[i * 1024 + j] );
+        }
+    }
+
+    omp_target_free(s_reduce, device_id);
+    omp_target_free(r_reduce, device_id);
+    MPI_Barrier( MPI_COMM_WORLD );
+    MPI_Finalize();
+
+    return 0;
+}
