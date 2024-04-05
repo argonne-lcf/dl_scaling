@@ -1,0 +1,291 @@
+Jobid: 8987484.amn-0001
+Running on nodes x1921c0s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c0s4b0n0.hostmgmt2000.cm.americas.sgi.com
+NUM_OF_NODES=2  TOTAL_NUM_RANKS=24  RANKS_PER_NODE=12
+Sat 30 Mar 2024 04:22:21 AM UTC
+Sat 30 Mar 2024 04:22:21 AM UTC
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+
+options:
+  processes:      24
+  backend:        sycl
+  iters:          1
+  warmup_iters:   0
+  iter_policy:    off
+  buf_count:      1
+  min_elem_count: 1
+  max_elem_count: 512
+  elem_counts:    [1 2 4 8 16 32 64 128 256 512]
+  check:          last
+  cache:          1
+  inplace:        0
+  sycl_dev_type:  gpu
+  sycl_root_dev:  0
+  sycl_mem_type:  usm
+  sycl_usm_type:  device
+  collectives:    allreduce 
+  datatypes:      float32 
+  reductions:     sum 
+  extended info:  auto
+  csv_filepath:   
+
+datatype: float32
+reduction: sum
+
+#------------------------------------------------------------
+# Benchmarking: allreduce 
+# #processes: 24
+#------------------------------------------------------------
+
+        #bytes  #repetitions   t_min[usec]   t_max[usec]   t_avg[usec]  stddev[%]
+             4             1    9199668.74    9199735.04    9199698.94       0.00
+             8             1   10448298.75   10448342.53   10448319.41       0.00
+            16             1        468.99        484.86        477.80       0.75
+            32             1        435.71        451.58        444.87       0.83
+            64             1        903.42        926.46        913.74       0.78
+           128             1        669.70        686.59        677.29       0.72
+           256             1        579.33        595.20        586.90       0.74
+           512             1        643.33        665.34        653.21       1.03
+          1024             1        646.40        663.55        654.29       0.77
+          2048             1        639.74        669.18        656.95       1.16
+
+# All done
+
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+Sat 30 Mar 2024 04:22:46 AM UTC
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+
+options:
+  processes:      24
+  backend:        sycl
+  iters:          1
+  warmup_iters:   0
+  iter_policy:    off
+  buf_count:      1
+  min_elem_count: 1
+  max_elem_count: 512
+  elem_counts:    [1 2 4 8 16 32 64 128 256 512]
+  check:          last
+  cache:          1
+  inplace:        0
+  sycl_dev_type:  gpu
+  sycl_root_dev:  0
+  sycl_mem_type:  usm
+  sycl_usm_type:  device
+  collectives:    allreduce 
+  datatypes:      float32 
+  reductions:     sum 
+  extended info:  auto
+  csv_filepath:   
+
+datatype: float32
+reduction: sum
+
+#------------------------------------------------------------
+# Benchmarking: allreduce 
+# #processes: 24
+#------------------------------------------------------------
+
+        #bytes  #repetitions   t_min[usec]   t_max[usec]   t_avg[usec]  stddev[%]
+             4             1    9159039.74    9159097.86    9159066.72       0.00
+             8             1   10673072.38   10673123.33   10673100.09       0.00
+            16             1        462.59        518.66        475.34       2.07
+            32             1        425.98        480.51        436.99       2.33
+            64             1       1014.78       1073.15       1021.08       1.10
+           128             1        829.95        881.66        839.81       1.20
+           256             1        663.55        710.40        673.08       1.33
+           512             1        660.48        706.56        669.56       1.31
+          1024             1        620.03        676.86        625.64       1.76
+          2048             1        620.29        641.28        629.33       0.91
+
+# All done
+
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+preferred platform: Intel(R) Level-Zero, found: 12 GPU device(s)
+Created context from devices of type: gpu
+Devices [1]:
+[0]: [Intel(R) Data Center GPU Max 1550]
+Sat 30 Mar 2024 04:23:11 AM UTC

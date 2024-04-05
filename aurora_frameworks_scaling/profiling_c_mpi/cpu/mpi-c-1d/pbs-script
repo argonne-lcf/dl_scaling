@@ -1,0 +1,48 @@
+#!/bin/bash -x
+# qsub -l nodes=1 -q workq  -l walltime=00:20:00 -l filesystems=gila -A  Aurora_deployment -I 
+
+#PBS -A Aurora_deployment
+#PBS -k doe
+
+module list
+module use /soft/modulefiles
+module load frameworks/2023.12.15.001
+
+echo Working directory is $PBS_O_WORKDIR
+cd $PBS_O_WORKDIR
+echo Jobid: $PBS_JOBID
+echo Running on host `hostname`
+echo Running on nodes `cat $PBS_NODEFILE`
+
+NNODES=`wc -l < $PBS_NODEFILE`
+RANKS_PER_NODE=12          # Number of MPI ranks per node
+NRANKS=$(( NNODES * RANKS_PER_NODE ))
+echo "NUM_OF_NODES=${NNODES}  TOTAL_NUM_RANKS=${NRANKS}  RANKS_PER_NODE=${RANKS_PER_NODE}"
+
+
+
+CPU_BINDING=list:1-2:9-10:17-18:25-26:33-34:41-42:52-53:60-61:68-69:76-77:84-85:92-93  
+# STRACE_WRAPPER=/lus/gila/projects/CSC250STDM10_CNDA/kaushik/gitrepos/src-strace-analyser/strace-analyzer/strace-wrapper.sh
+
+
+date 
+
+# mpiexec  --np ${NRANKS} -ppn ${RANKS_PER_NODE} --cpu-bind $CPU_BINDING ./collectives
+# mpiexec  --np ${NRANKS} -ppn ${RANKS_PER_NODE} --cpu-bind $CPU_BINDING ./collectives
+
+# mkdir -p $PBS_O_WORKDIR/strace_1_$NNODES
+# mkdir -p $PBS_O_WORKDIR/strace_2_$NNODES
+
+# LOGDIR=$PBS_O_WORKDIR/strace_1_$NNODES mpiexec  --env FI_CXI_DEFAULT_CQ_SIZE=16384  --env FI_CXI_OVFLOW_BUF_SIZE=8388608 --env FI_CXI_CQ_FILL_PERCENT=20  --np ${NRANKS} -ppn ${RANKS_PER_NODE} --cpu-bind  $CPU_BINDING  $STRACE_WRAPPER  ./collectives
+# date
+# LOGDIR=$PBS_O_WORKDIR/strace_2_$NNODES mpiexec  --env FI_CXI_DEFAULT_CQ_SIZE=16384  --env FI_CXI_OVFLOW_BUF_SIZE=8388608 --env FI_CXI_CQ_FILL_PERCENT=20  --np ${NRANKS} -ppn ${RANKS_PER_NODE} --cpu-bind  $CPU_BINDING  $STRACE_WRAPPER  ./collectives
+# date
+
+# mpiexec --np ${NRANKS} -ppn ${RANKS_PER_NODE} --cpu-bind $CPU_BINDING ./start_gprofng.sh 1
+# mpiexec --np ${NRANKS} -ppn ${RANKS_PER_NODE} --cpu-bind $CPU_BINDING ./start_gprofng.sh 2
+
+
+mpiexec   --env  FI_CXI_DEFAULT_CQ_SIZE=1048576 --env  FI_CXI_RX_MATCH_MODE=software --env  MPIR_CVAR_CH4_MT_MODEL=lockless   --env FI_CXI_OVFLOW_BUF_SIZE=8388608 --env FI_CXI_CQ_FILL_PERCENT=20  --np ${NRANKS} -ppn ${RANKS_PER_NODE} --cpu-bind  $CPU_BINDING   ./collectives
+date
+mpiexec   --env  FI_CXI_DEFAULT_CQ_SIZE=1048576 --env  FI_CXI_RX_MATCH_MODE=software --env  MPIR_CVAR_CH4_MT_MODEL=lockless   --env FI_CXI_OVFLOW_BUF_SIZE=8388608 --env FI_CXI_CQ_FILL_PERCENT=20  --np ${NRANKS} -ppn ${RANKS_PER_NODE} --cpu-bind  $CPU_BINDING   ./collectives
+date

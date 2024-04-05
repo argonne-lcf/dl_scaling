@@ -1,0 +1,28 @@
+Working directory is /lus/gila/projects/CSC250STDM10_CNDA/kaushik/all_reduce_bulk_for/baseline_c_mpi_all_Reduce/cpu/1node-vit/iter6
+Jobid: 8987481.amn-0001
+Running on host x1921c1s6b0n0
+Running on nodes x1921c1s6b0n0.hostmgmt2000.cm.americas.sgi.com x1922c3s3b0n0.hostmgmt2001.cm.americas.sgi.com x1922c3s4b0n0.hostmgmt2001.cm.americas.sgi.com x1922c3s5b0n0.hostmgmt2001.cm.americas.sgi.com x1922c3s6b0n0.hostmgmt2001.cm.americas.sgi.com x1922c3s7b0n0.hostmgmt2001.cm.americas.sgi.com x1922c4s0b0n0.hostmgmt2001.cm.americas.sgi.com x1922c4s1b0n0.hostmgmt2001.cm.americas.sgi.com x1922c4s2b0n0.hostmgmt2001.cm.americas.sgi.com x1922c4s3b0n0.hostmgmt2001.cm.americas.sgi.com x1922c4s4b0n0.hostmgmt2001.cm.americas.sgi.com x1922c4s5b0n0.hostmgmt2001.cm.americas.sgi.com x1922c4s6b0n0.hostmgmt2001.cm.americas.sgi.com x1922c4s7b0n0.hostmgmt2001.cm.americas.sgi.com x1922c5s0b0n0.hostmgmt2001.cm.americas.sgi.com x1922c5s2b0n0.hostmgmt2001.cm.americas.sgi.com x1922c5s3b0n0.hostmgmt2001.cm.americas.sgi.com x1922c5s4b0n0.hostmgmt2001.cm.americas.sgi.com x1922c5s5b0n0.hostmgmt2001.cm.americas.sgi.com x1922c5s7b0n0.hostmgmt2001.cm.americas.sgi.com x1922c6s0b0n0.hostmgmt2001.cm.americas.sgi.com x1922c6s1b0n0.hostmgmt2001.cm.americas.sgi.com x1922c6s2b0n0.hostmgmt2001.cm.americas.sgi.com x1922c6s3b0n0.hostmgmt2001.cm.americas.sgi.com x1922c6s4b0n0.hostmgmt2001.cm.americas.sgi.com x1922c6s5b0n0.hostmgmt2001.cm.americas.sgi.com x1922c6s6b0n0.hostmgmt2001.cm.americas.sgi.com x1922c6s7b0n0.hostmgmt2001.cm.americas.sgi.com x1922c7s0b0n0.hostmgmt2001.cm.americas.sgi.com x1922c7s1b0n0.hostmgmt2001.cm.americas.sgi.com x1922c7s2b0n0.hostmgmt2001.cm.americas.sgi.com x1922c7s4b0n0.hostmgmt2001.cm.americas.sgi.com
+NUM_OF_NODES=32  TOTAL_NUM_RANKS=384  RANKS_PER_NODE=12
+Sat 30 Mar 2024 02:56:06 AM UTC
+ 192: Barrier HALF, us      :  14.0503
+ 192: Allreduce    8 B HALF, us      :  18.8507
+ 192: Allreduce 2048 B HALF, us      :  74.2391
+ 384: Barrier COMM_WORLD, us:  31.1898
+ 192: Barrier HALF, us      :  14.4735
+First call: Allreduce    8 B COMM_WORLD, us: 222.8682
+ 384: Allreduce    8 B COMM_WORLD, us:  22.0721
+ 192: Allreduce    8 B HALF, us      :  19.1359
+ 384: Allreduce 2048 B COMM_WORLD, us:  95.2109
+ 192: Allreduce 2048 B HALF, us      :  85.8628
+Sat 30 Mar 2024 02:56:11 AM UTC
+ 192: Barrier HALF, us      :  14.2569
+ 192: Allreduce    8 B HALF, us      :  18.4210
+ 192: Allreduce 2048 B HALF, us      :  74.0447
+ 384: Barrier COMM_WORLD, us:  18.6242
+ 192: Barrier HALF, us      :  14.6201
+First call: Allreduce    8 B COMM_WORLD, us: 462.6279
+ 384: Allreduce    8 B COMM_WORLD, us:  22.1205
+ 192: Allreduce    8 B HALF, us      :  18.8250
+ 384: Allreduce 2048 B COMM_WORLD, us:  96.0176
+ 192: Allreduce 2048 B HALF, us      :  86.1978
+Sat 30 Mar 2024 02:56:15 AM UTC

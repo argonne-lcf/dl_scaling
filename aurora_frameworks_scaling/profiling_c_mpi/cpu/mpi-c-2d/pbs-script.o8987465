@@ -1,0 +1,13 @@
+Working directory is /lus/gila/projects/CSC250STDM10_CNDA/kaushik/all_reduce_bulk_for/baseline_c_mpi_all_Reduce/cpu/1node/iter4
+Jobid: 8987465.amn-0001
+Running on host x1921c0s4b0n0
+Running on nodes x1921c0s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c0s6b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s2b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s3b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s5b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s6b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s7b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s0b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s2b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s3b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s5b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s6b0n0.hostmgmt2000.cm.americas.sgi.com
+NUM_OF_NODES=16  TOTAL_NUM_RANKS=192  RANKS_PER_NODE=12
+Sat 30 Mar 2024 01:39:31 AM UTC
+Sat 30 Mar 2024 01:39:31 AM UTC
+First all reduce time :   1.6868 
+Second all reduce time :   0.5350 
+Sat 30 Mar 2024 01:39:35 AM UTC
+First all reduce time :   2.5167 
+Second all reduce time :   0.5918 
+Sat 30 Mar 2024 01:39:39 AM UTC
