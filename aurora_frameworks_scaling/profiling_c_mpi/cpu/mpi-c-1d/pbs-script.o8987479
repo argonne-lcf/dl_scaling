@@ -1,0 +1,28 @@
+Working directory is /lus/gila/projects/CSC250STDM10_CNDA/kaushik/all_reduce_bulk_for/baseline_c_mpi_all_Reduce/cpu/1node-vit/iter6
+Jobid: 8987479.amn-0001
+Running on host x1921c0s1b0n0
+Running on nodes x1921c0s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c0s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c0s6b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s2b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s3b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s5b0n0.hostmgmt2000.cm.americas.sgi.com
+NUM_OF_NODES=8  TOTAL_NUM_RANKS=96  RANKS_PER_NODE=12
+Sat 30 Mar 2024 02:13:51 AM UTC
+  96: Barrier COMM_WORLD, us:  11.2024
+  48: Barrier HALF, us      :   7.7521
+First call: Allreduce    8 B COMM_WORLD, us: 178.9358
+  96: Allreduce    8 B COMM_WORLD, us:  14.8927
+  48: Allreduce    8 B HALF, us      :  11.2658
+  96: Allreduce 2048 B COMM_WORLD, us:  67.8577
+  48: Allreduce 2048 B HALF, us      :  58.8153
+  48: Barrier HALF, us      :   7.3403
+  48: Allreduce    8 B HALF, us      :  11.2561
+  48: Allreduce 2048 B HALF, us      :  56.3729
+Sat 30 Mar 2024 02:13:55 AM UTC
+  48: Barrier HALF, us      :   7.4223
+  48: Allreduce    8 B HALF, us      :  11.0257
+  48: Allreduce 2048 B HALF, us      :  56.6689
+  96: Barrier COMM_WORLD, us:  11.3006
+  48: Barrier HALF, us      :   7.8442
+First call: Allreduce    8 B COMM_WORLD, us: 210.3671
+  96: Allreduce    8 B COMM_WORLD, us:  14.8979
+  48: Allreduce    8 B HALF, us      :  11.2727
+  96: Allreduce 2048 B COMM_WORLD, us:  67.8784
+  48: Allreduce 2048 B HALF, us      :  58.5884
+Sat 30 Mar 2024 02:13:59 AM UTC

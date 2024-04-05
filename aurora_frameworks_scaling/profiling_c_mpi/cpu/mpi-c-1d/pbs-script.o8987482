@@ -1,0 +1,28 @@
+Working directory is /lus/gila/projects/CSC250STDM10_CNDA/kaushik/all_reduce_bulk_for/baseline_c_mpi_all_Reduce/cpu/1node-vit/iter6
+Jobid: 8987482.amn-0001
+Running on host x1921c0s1b0n0
+Running on nodes x1921c0s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c0s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c0s6b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s2b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s3b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s5b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s6b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s7b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s0b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s2b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s3b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s5b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s6b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s7b0n0.hostmgmt2000.cm.americas.sgi.com x1921c3s0b0n0.hostmgmt2000.cm.americas.sgi.com x1921c3s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c3s2b0n0.hostmgmt2000.cm.americas.sgi.com x1921c3s3b0n0.hostmgmt2000.cm.americas.sgi.com x1921c3s5b0n0.hostmgmt2000.cm.americas.sgi.com x1921c3s6b0n0.hostmgmt2000.cm.americas.sgi.com x1921c3s7b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s0b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s2b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s3b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s5b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s6b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s7b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s0b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s2b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s3b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c7s6b0n0.hostmgmt2000.cm.americas.sgi.com x1921c7s7b0n0.hostmgmt2000.cm.americas.sgi.com x1922c0s0b0n0.hostmgmt2001.cm.americas.sgi.com x1922c0s1b0n0.hostmgmt2001.cm.americas.sgi.com x1922c0s2b0n0.hostmgmt2001.cm.americas.sgi.com x1922c0s3b0n0.hostmgmt2001.cm.americas.sgi.com x1922c0s4b0n0.hostmgmt2001.cm.americas.sgi.com x1922c0s5b0n0.hostmgmt2001.cm.americas.sgi.com x1922c0s6b0n0.hostmgmt2001.cm.americas.sgi.com x1922c0s7b0n0.hostmgmt2001.cm.americas.sgi.com x1922c1s0b0n0.hostmgmt2001.cm.americas.sgi.com x1922c1s1b0n0.hostmgmt2001.cm.americas.sgi.com x1922c1s2b0n0.hostmgmt2001.cm.americas.sgi.com x1922c1s3b0n0.hostmgmt2001.cm.americas.sgi.com x1922c1s4b0n0.hostmgmt2001.cm.americas.sgi.com x1922c1s5b0n0.hostmgmt2001.cm.americas.sgi.com x1922c1s6b0n0.hostmgmt2001.cm.americas.sgi.com x1922c1s7b0n0.hostmgmt2001.cm.americas.sgi.com x1922c2s0b0n0.hostmgmt2001.cm.americas.sgi.com x1922c2s2b0n0.hostmgmt2001.cm.americas.sgi.com x1922c2s3b0n0.hostmgmt2001.cm.americas.sgi.com x1922c2s4b0n0.hostmgmt2001.cm.americas.sgi.com x1922c2s5b0n0.hostmgmt2001.cm.americas.sgi.com x1922c2s6b0n0.hostmgmt2001.cm.americas.sgi.com x1922c2s7b0n0.hostmgmt2001.cm.americas.sgi.com x1922c3s0b0n0.hostmgmt2001.cm.americas.sgi.com
+NUM_OF_NODES=64  TOTAL_NUM_RANKS=768  RANKS_PER_NODE=12
+Sat 30 Mar 2024 04:18:17 AM UTC
+ 768: Barrier COMM_WORLD, us:  23.2445
+ 384: Barrier HALF, us      :  17.8343
+First call: Allreduce    8 B COMM_WORLD, us: 542.8714
+ 768: Allreduce    8 B COMM_WORLD, us:  26.2218
+ 384: Allreduce    8 B HALF, us      :  25.2700
+ 768: Allreduce 2048 B COMM_WORLD, us:  93.2205
+ 384: Allreduce 2048 B HALF, us      :  83.1976
+ 384: Barrier HALF, us      :  19.2992
+ 384: Allreduce    8 B HALF, us      :  27.1112
+ 384: Allreduce 2048 B HALF, us      :  86.6483
+Sat 30 Mar 2024 04:18:22 AM UTC
+ 768: Barrier COMM_WORLD, us:  23.4780
+ 384: Barrier HALF, us      :  17.9962
+First call: Allreduce    8 B COMM_WORLD, us: 550.3728
+ 768: Allreduce    8 B COMM_WORLD, us:  26.1181
+ 384: Allreduce    8 B HALF, us      :  23.6140
+ 768: Allreduce 2048 B COMM_WORLD, us:  92.8474
+ 384: Allreduce 2048 B HALF, us      :  83.5985
+ 384: Barrier HALF, us      :  19.5178
+ 384: Allreduce    8 B HALF, us      :  26.7836
+ 384: Allreduce 2048 B HALF, us      :  86.5646
+Sat 30 Mar 2024 04:18:26 AM UTC

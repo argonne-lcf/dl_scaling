@@ -1,0 +1,90 @@
+Jobid: 8987502.amn-0001
+Running on nodes x1921c1s2b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s3b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s5b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s6b0n0.hostmgmt2000.cm.americas.sgi.com x1921c1s7b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s0b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s2b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s3b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s5b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s6b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s7b0n0.hostmgmt2000.cm.americas.sgi.com x1921c3s0b0n0.hostmgmt2000.cm.americas.sgi.com x1921c3s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c3s2b0n0.hostmgmt2000.cm.americas.sgi.com x1921c3s3b0n0.hostmgmt2000.cm.americas.sgi.com x1921c3s5b0n0.hostmgmt2000.cm.americas.sgi.com x1921c3s6b0n0.hostmgmt2000.cm.americas.sgi.com x1921c3s7b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s0b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s2b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s3b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s5b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s6b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s7b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s0b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s2b0n0.hostmgmt2000.cm.americas.sgi.com
+NUM_OF_NODES=32  TOTAL_NUM_RANKS=384  RANKS_PER_NODE=12
+Sat 30 Mar 2024 04:54:04 AM UTC
+Sat 30 Mar 2024 04:54:04 AM UTC
+
+options:
+  processes:      384
+  backend:        host
+  iters:          1
+  warmup_iters:   0
+  iter_policy:    off
+  buf_count:      1
+  min_elem_count: 1
+  max_elem_count: 512
+  elem_counts:    [1 2 4 8 16 32 64 128 256 512]
+  check:          last
+  cache:          1
+  inplace:        0
+  collectives:    allreduce 
+  datatypes:      float32 
+  reductions:     sum 
+  extended info:  auto
+  csv_filepath:   
+
+datatype: float32
+reduction: sum
+
+#------------------------------------------------------------
+# Benchmarking: allreduce 
+# #processes: 384
+#------------------------------------------------------------
+
+        #bytes  #repetitions   t_min[usec]   t_max[usec]   t_avg[usec]  stddev[%]
+             4             1       2297.34       2840.58       2569.25       6.10
+             8             1       1704.70       2220.03       1963.66       7.59
+            16             1       1659.90       2163.20       1913.75       7.68
+            32             1       1626.88       2140.67       1888.80       7.75
+            64             1       1595.14       2140.67       1881.76       7.87
+           128             1       1575.68       2169.86       1895.79       8.36
+           256             1       1579.26       2176.00       1879.55       9.15
+           512             1       1576.70       2328.58       1974.42      10.44
+          1024             1       1570.56       2298.37       1935.22      10.89
+          2048             1       3383.81       3525.89       3440.84       0.72
+
+# All done
+
+Sat 30 Mar 2024 04:54:12 AM UTC
+
+options:
+  processes:      384
+  backend:        host
+  iters:          1
+  warmup_iters:   0
+  iter_policy:    off
+  buf_count:      1
+  min_elem_count: 1
+  max_elem_count: 512
+  elem_counts:    [1 2 4 8 16 32 64 128 256 512]
+  check:          last
+  cache:          1
+  inplace:        0
+  collectives:    allreduce 
+  datatypes:      float32 
+  reductions:     sum 
+  extended info:  auto
+  csv_filepath:   
+
+datatype: float32
+reduction: sum
+
+#------------------------------------------------------------
+# Benchmarking: allreduce 
+# #processes: 384
+#------------------------------------------------------------
+
+        #bytes  #repetitions   t_min[usec]   t_max[usec]   t_avg[usec]  stddev[%]
+             4             1       2428.93       3096.58       2778.35       7.39
+             8             1       1740.54       2267.39       2007.34       7.42
+            16             1       1666.56       2176.26       1922.65       7.61
+            32             1       1641.73       2139.65       1890.02       7.59
+            64             1       1605.89       2124.54       1863.88       7.94
+           128             1       1576.19       2127.10       1857.72       8.47
+           256             1       1565.95       2153.73       1859.34       9.14
+           512             1       1552.13       2274.30       1913.06      10.94
+          1024             1       1562.88       2294.02       1931.46      10.90
+          2048             1       3360.77       3459.58       3415.52       0.63
+
+# All done
+

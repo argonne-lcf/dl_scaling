@@ -1,0 +1,13 @@
+Working directory is /lus/gila/projects/CSC250STDM10_CNDA/kaushik/all_reduce_bulk_for/baseline_c_mpi_all_Reduce/cpu/1node/iter4
+Jobid: 8987462.amn-0001
+Running on host x1921c0s4b0n0
+Running on nodes x1921c0s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c0s6b0n0.hostmgmt2000.cm.americas.sgi.com
+NUM_OF_NODES=2  TOTAL_NUM_RANKS=24  RANKS_PER_NODE=12
+Sat 30 Mar 2024 01:37:46 AM UTC
+Sat 30 Mar 2024 01:37:46 AM UTC
+First all reduce time :   1.1103 
+Second all reduce time :   0.2367 
+Sat 30 Mar 2024 01:37:50 AM UTC
+First all reduce time :   2.1246 
+Second all reduce time :   0.3243 
+Sat 30 Mar 2024 01:37:54 AM UTC

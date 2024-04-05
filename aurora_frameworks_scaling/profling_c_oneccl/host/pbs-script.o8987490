@@ -1,0 +1,98 @@
+Jobid: 8987490.amn-0001
+Running on nodes x1921c0s6b0n0.hostmgmt2000.cm.americas.sgi.com
+NUM_OF_NODES=1  TOTAL_NUM_RANKS=12  RANKS_PER_NODE=12
+Fri 29 Mar 2024 11:57:20 PM UTC
+Fri 29 Mar 2024 11:57:20 PM UTC
+
+options:
+  processes:      12
+  backend:        host
+  iters:          1
+  warmup_iters:   0
+  iter_policy:    off
+  buf_count:      1
+  min_elem_count: 1
+  max_elem_count: 512
+  elem_counts:    [1 2 4 8 16 32 64 128 256 512]
+  check:          last
+  cache:          1
+  inplace:        0
+  sycl_dev_type:  host
+  sycl_root_dev:  0
+  sycl_mem_type:  usm
+  sycl_usm_type:  device
+  collectives:    allreduce 
+  datatypes:      float32 
+  reductions:     sum 
+  extended info:  auto
+  csv_filepath:   
+
+datatype: float32
+reduction: sum
+
+#------------------------------------------------------------
+# Benchmarking: allreduce 
+# #processes: 12
+#------------------------------------------------------------
+
+        #bytes  #repetitions   t_min[usec]   t_max[usec]   t_avg[usec]  stddev[%]
+             4             1        173.06        189.18        180.10       3.35
+             8             1         66.56         79.10         73.58       5.44
+            16             1         63.74         76.29         69.31       6.50
+            32             1         61.95         76.03         68.25       6.94
+            64             1         84.22         90.62         87.62       2.15
+           128             1         87.55         93.70         91.33       2.11
+           256             1         83.97         89.60         86.40       1.73
+           512             1         87.30         95.74         92.27       2.58
+          1024             1         91.65        101.63         97.37       2.79
+          2048             1         94.46        103.17         99.82       2.94
+
+# All done
+
+Fri 29 Mar 2024 11:57:25 PM UTC
+
+options:
+  processes:      12
+  backend:        host
+  iters:          1
+  warmup_iters:   0
+  iter_policy:    off
+  buf_count:      1
+  min_elem_count: 1
+  max_elem_count: 512
+  elem_counts:    [1 2 4 8 16 32 64 128 256 512]
+  check:          last
+  cache:          1
+  inplace:        0
+  sycl_dev_type:  host
+  sycl_root_dev:  0
+  sycl_mem_type:  usm
+  sycl_usm_type:  device
+  collectives:    allreduce 
+  datatypes:      float32 
+  reductions:     sum 
+  extended info:  auto
+  csv_filepath:   
+
+datatype: float32
+reduction: sum
+
+#------------------------------------------------------------
+# Benchmarking: allreduce 
+# #processes: 12
+#------------------------------------------------------------
+
+        #bytes  #repetitions   t_min[usec]   t_max[usec]   t_avg[usec]  stddev[%]
+             4             1        177.66        191.49        184.02       2.66
+             8             1         66.56         79.10         72.83       5.80
+            16             1         64.51         78.34         71.19       6.46
+            32             1         60.93         73.73         66.84       6.39
+            64             1         81.41         89.60         86.46       2.65
+           128             1        100.86        106.75        104.68       1.91
+           256             1         93.95         97.02         95.64       0.95
+           512             1         88.83         96.00         92.59       2.18
+          1024             1         90.88         97.28         95.47       2.01
+          2048             1         99.07        109.06        104.06       2.62
+
+# All done
+
