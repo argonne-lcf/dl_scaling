@@ -1,16 +1,27 @@
 import torch.nn.parallel
-import intel_extension_for_pytorch  # Added Extra
+import datetime
 from mpi4py import MPI
 import os
 import socket
-import datetime
-t1 = datetime.now()
-import torch.distributed as dist
-t2 = datetime.now()
-elapsed = (t2 - t1).total_seconds()
-print(f"F-profiling complted at t2 {t2} (import torch dist - time : {elapsed:.5f})")
+import sys
+t0 = datetime.datetime.now()
+import intel_extension_for_pytorch  # Added Extra
+t1 = datetime.datetime.now()
+elapsed = (t1 - t0).total_seconds() 
+print(f"import intel_extension_for_pytorch time : {elapsed:.5f}")
 
+t0 = datetime.datetime.now()
+import torch.distributed as dist
+t1 = datetime.datetime.now()
+elapsed = (t1 - t0).total_seconds() 
+print(f"import torch.distributed as dist time : {elapsed:.5f}")
+
+t0 = datetime.datetime.now()
 import oneccl_bindings_for_pytorch
+t1 = datetime.datetime.now()
+elapsed = (t1 - t0).total_seconds() 
+print(f"import oneccl_bindings_for_pytorch time : {elapsed:.5f}")
+
 
 MPI.COMM_WORLD.Barrier()
 
@@ -34,11 +45,11 @@ master_port                 = MPI.COMM_WORLD.bcast(master_port, root=0)
 os.environ["MASTER_ADDR"]   = master_addr
 os.environ["MASTER_PORT"]   = str(master_port)
 
-t3 = datetime.now()
+t2 = datetime.datetime.now()
 dist.init_process_group(backend = "ccl", init_method = 'env://', world_size = mpi_world_size, rank = mpi_my_rank, timeout = datetime.timedelta(seconds=120))
-t4 = datetime.now()
-elapsed = (t4 - t3).total_seconds()
-print(f"F-profiling complted at t4 {t4} (import hvd init - time : {elapsed:.5f})")
+t3 = datetime.datetime.now()
+elapsed = (t3 - t2).total_seconds() 
+print(f"CCL init time : {elapsed:.5f}")
 
 
 dist_my_rank        = dist.get_rank()
@@ -54,13 +65,15 @@ def get_default_device():
 device  = get_default_device()
 print(device)
 # torch.xpu.set_device(hvd_local_rank if torch.xpu.device_count() > 1 else 0)
-
-for _ in range(50):
-    x = torch.ones([1024, 1024]).to(device, non_blocking=True)
-    # print(x)
-    t5 = datetime.datetime.now() 
-    dist.all_reduce(x,op=dist.ReduceOp.SUM)  # Added Extra op
-    t6 = datetime.datetime.now()
-    elapsed = (t6 - t5).total_seconds() 
-    print(f"Python: Elapsed time in each iter for all_reduce : {elapsed:.5f})")
+dim_size=int(int(sys.argv[1])/4)
+MPI.COMM_WORLD.Barrier()
     
+for _ in range(50):
+    x = torch.ones([1, dim_size],dtype=torch.float32).to(device, non_blocking=True)
+    # print(x)
+    t4 = datetime.datetime.now() 
+    dist.all_reduce(x, op=dist.ReduceOp.SUM)  # Added Extra op
+    t5 = datetime.datetime.now()
+    elapsed = (t5 - t4).total_seconds() * 10**6
+    if mpi_my_rank == 0:
+        print(f"Python: Elapsed time in each iter for all_reduce : {elapsed:.5f} u.sec u.sec for bytes {int(sys.argv[1])} by rank {dist_my_rank}")
