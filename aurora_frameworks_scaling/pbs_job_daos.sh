@@ -6,19 +6,11 @@
 #PBS -q alcf_daos_cn
 #PBS -k doe 
 
-# qsub -A Aurora_deployment -q alcf_daos_cn  ./job_daos.sh
 # qsub -l select=1 -l walltime=01:30:00 -A Aurora_deployment -q alcf_daos_cn -l daos=default ./job_daos.sh  or - I 
 
-
-
-# After creating the container, keep all the frameworks related files in a similar location as below and 
-# module unload the main packages and module load from the below location. 
-# /tmp/CSC250STDM10_CNDA/datascience_softwares/to-go-daos/local-frameworks/
-
-# use the tool mentioned in https://docs.daos.io/v2.4/user/datamover/
-# for fast copy from lustre to daos 
-
-
+# After creating the container, keep all the software frameworks related files inside the container. 
+# module unload the main packages from /soft and module load from the container /tmp/CSC250STDM10_CNDA/datascience_softwares/to-go-daos/local-frameworks/
+# use the tool mentioned in https://docs.daos.io/v2.4/user/datamover/ for fast copy from lustre to daos 
 
 
 set -x
@@ -26,6 +18,8 @@ echo "Job Started :  `date`"
 echo $PBS_JOBID
 cd $PBS_O_WORKDIR
 echo "List of allocated nodes : $PBS_NODEFILE"
+
+# Load the DAOS modules and mount the container
 
 module restore
 start_time=$(date +%s)
@@ -46,9 +40,7 @@ diff=$(($end_time - $start_time))
 echo "1st module load + launch time $diff seconds."
 mount|grep dfuse
 
-
-
-
+# To enable DAOS logs
 
 # export D_LOG_MASK=INFO  
 # export D_LOG_STDERR_IN_LOG=1
@@ -56,6 +48,7 @@ mount|grep dfuse
 # export D_IL_REPORT=1 # Logs for IL
 # LD_PRELOAD=$DAOS_PRELOAD mpiexec 
 
+# module load the frameworks software from the container instead of the main softwares. 
 
 echo -e "sourcing module from contianer"
 module list
@@ -66,6 +59,8 @@ diff=$(($end_time - $start_time))
 echo "source local frameworks time $diff seconds."
 module list
 
+# Temporary patch to make sure the module daos is unaffected by the previous module load
+
 start_time=$(date +%s)
 module use /soft/modulefiles/daos/
 module load base
@@ -75,21 +70,33 @@ echo "2nd daos module load time $diff seconds."
 module avail
 module list
 
+# Run the app from within the DAOS container
 
 echo -e "Running python code"
 LD_PRELOAD=/usr/lib64/libpil4dfs.so 
-rpn=12   
-nnodes=$(cat $PBS_NODEFILE | wc -l)
-# start_time=$(date +%s)
-# mpiexec -np $((rpn*nnodes)) -ppn $rpn --cpu-bind "list:0:1:2:3:52:53:54:55:56:57:58:59" -genvall --no-vni --env LD_PRELOAD=/usr/lib64/libpil4dfs.so  python3 /gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/init-test/one_line_torch.py
-# end_time=$(date +%s)
-# diff=$(($end_time - $start_time))
-# echo "Total python run time $diff seconds."
+CPU_BINDING1=list:3:4:11:12:19:20:27:28:35:36:43:44:55:56:63:64:71:72:79:80:87:88:95:96 
+EXT_ENV="--env FI_CXI_DEFAULT_CQ_SIZE=1048576"
 
-mkdir -p $PBS_O_WORKDIR/job_lus_strace_$nnodes
-date 
-LOGDIR=$PBS_O_WORKDIR/job_lus_strace_$nnodes mpiexec -np $((rpn*nnodes)) -ppn $rpn --cpu-bind "list:0:1:2:3:52:53:54:55:56:57:58:59"  -genvall --no-vni --env LD_PRELOAD=/usr/lib64/libpil4dfs.so /gecko/CSC250STDM10_CNDA/kaushik/gitrepos/src-strace-analyser/strace-analyzer/strace-wrapper-c.sh python3 /gecko/CSC250STDM10_CNDA/kaushik/dso-workspace/init-test/one_line_torch.py
-date
+NNODES=`wc -l < $PBS_NODEFILE`
+RANKS_PER_NODE=12          # Number of MPI ranks per node
+NRANKS=$(( NNODES * RANKS_PER_NODE ))
+echo "NUM_OF_NODES=${NNODES}  TOTAL_NUM_RANKS=${NRANKS}  RANKS_PER_NODE=${RANKS_PER_NODE}"
+
+BUF_SIZE=8
+start_time=$(date +%s)
+mpiexec ${EXT_ENV} --np ${NRANKS} -ppn ${RANKS_PER_NODE}  --cpu-bind  $CPU_BINDING1 -genvall --no-vni --env LD_PRELOAD=/usr/lib64/libpil4dfs.so  python3 pbs_job_py_torch_ccl_gpu.py $BUF_SIZE
+end_time=$(date +%s)
+diff=$(($end_time - $start_time))
+echo "Total python run time $diff seconds."
+
+# For strace
+
+# mkdir -p $PBS_O_WORKDIR/job_lus_strace_${NNODES}
+# date 
+# LOGDIR=$PBS_O_WORKDIR/job_lus_strace_${NNODES} mpiexec ${EXT_ENV} --np ${NRANKS} -ppn ${RANKS_PER_NODE}  --cpu-bind  $CPU_BINDING1 -genvall --no-vni --env LD_PRELOAD=/usr/lib64/libpil4dfs.so gitrepos/src-strace-analyser/strace-analyzer/strace-wrapper-c.sh  python3 pbs_job_py_torch_ccl_gpu.py $BUF_SIZE
+# date
+
+# To unmount your container
 
 clean-dfuse.sh ${DAOS_POOL}:${DAOS_CONT} # cleanup dfuse mounts
 # daos container destroy  ${DAOS_POOL} ${DAOS_CONT} 
