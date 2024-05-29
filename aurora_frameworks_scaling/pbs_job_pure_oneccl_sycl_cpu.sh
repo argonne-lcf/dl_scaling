@@ -16,7 +16,7 @@ RANKS_PER_NODE=12          # Number of MPI ranks per node
 NRANKS=$(( NNODES * RANKS_PER_NODE ))
 echo "NUM_OF_NODES=${NNODES}  TOTAL_NUM_RANKS=${NRANKS}  RANKS_PER_NODE=${RANKS_PER_NODE}"
 
-CPU_BINDING1=list:3:4:11:12:19:20:27:28:35:36:43:44:55:56:63:64:71:72:79:80:87:88:95:96 
+CPU_BINDING1=list:4:9:14:19:20:25:56:61:66:71:74:79
 EXT_ENV="--env FI_CXI_DEFAULT_CQ_SIZE=1048576"
 # https://oneapi-src.github.io/oneCCL/benchmark.html
 APP1=/lus/gila/projects/CSC250STDM10_CNDA/kaushik/oneCCL/build/_install/examples/benchmark/benchmark
