@@ -1,12 +1,17 @@
-import torch.nn.parallel
 import datetime
-from mpi4py import MPI
+from time import perf_counter_ns
+import sys
 import os
 import socket
-import sys
+from mpi4py import MPI
+
+t1 = perf_counter_ns() 
 import intel_extension_for_pytorch  # Added Extra
+import torch.nn.parallel
 import torch.distributed as dist
 import oneccl_bindings_for_pytorch
+t2 = perf_counter_ns() 
+import_timer = t2 - t1
 
 
 MPI.COMM_WORLD.Barrier()
@@ -31,7 +36,13 @@ master_port                 = MPI.COMM_WORLD.bcast(master_port, root=0)
 os.environ["MASTER_ADDR"]   = master_addr
 os.environ["MASTER_PORT"]   = str(master_port)
 
-dist.init_process_group(backend = "ccl", init_method = 'env://', world_size = mpi_world_size, rank = mpi_my_rank, timeout = datetime.timedelta(seconds=120))
+MPI.COMM_WORLD.Barrier()
+t3 = perf_counter_ns() 
+dist.init_process_group(backend = "ccl", init_method = 'env://', world_size = mpi_world_size, rank = mpi_my_rank, timeout = datetime.timedelta(seconds=3600))
+t4 = perf_counter_ns() 
+init_timer = t4 - t3
+MPI.COMM_WORLD.Barrier()
+
 
 dist_my_rank        = dist.get_rank()
 dist_world_size     = dist.get_world_size()
@@ -49,15 +60,17 @@ MPI.COMM_WORLD.Barrier()
 
 elapsed1=[]
 
-for _ in range(100):
+for _ in range(50):
     x = torch.ones([1, dim_size],dtype=torch.float32).to(device, non_blocking=True)
     # print(x)
-    t4 = datetime.datetime.now() 
+    t5 = perf_counter_ns() 
     dist.all_reduce(x, op=dist.ReduceOp.SUM)  # Added Extra op
-    t5 = datetime.datetime.now()
-    elapsed = (t5 - t4).total_seconds() * 10**6
-    elapsed1.append(elapsed)
+    MPI.COMM_WORLD.Barrier()
+    t6 = perf_counter_ns()
+    elapsed1.append(t6 - t5)
 
 if mpi_my_rank == 0:
+    print(import_timer)
+    print(init_timer)
     for e in elapsed1:
         print(e)

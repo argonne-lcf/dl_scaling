@@ -11,9 +11,13 @@ using namespace sycl;
 
 int main(int argc, char** argv) 
 {
-    MPI_Init(&argc, &argv);
     int rank;
-    double t1, t2, t3, t4;
+    double t1, t2, t3, t4, init_timer;
+
+    t1 = MPI_Wtime();
+    MPI_Init(&argc, &argv);
+    t2 = MPI_Wtime();
+    if ( rank == 0 )    init_timer=( t2 - t1 ) * 1e6;
 
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     sycl::queue Q(sycl::gpu_selector_v);
@@ -36,22 +40,28 @@ int main(int argc, char** argv)
     MPI_Barrier( MPI_COMM_WORLD ); 
 
 
-    std::vector<double> elapsed(100);
-    for (int i = 0; i < 100; i++)
+    std::vector<double> elapsed(50);
+    for (int i = 0; i < 50; i++)
     {
-        t1 = MPI_Wtime();
+        t3 = MPI_Wtime();
         MPI_Allreduce(A, B, global_range, MPI_FLOAT, MPI_SUM, MPI_COMM_WORLD);
-        t2 = MPI_Wtime();
-        if ( rank == 0 )    elapsed[i]=( t2 - t1 ) * 1e6;
+        MPI_Barrier( MPI_COMM_WORLD ); 
+        t4 = MPI_Wtime();
+        if ( rank == 0 )    elapsed[i]=( t4 - t3 ) * 1e6;
     }
 
     // Q.memcpy(B_host.data(),B, global_range*sizeof(float)).wait();
     // for (size_t i = 0; i < global_range; i++)
     //     std::cout << "B[ " << i << " ] = " << B_host[i] << std::endl;
 
-    for (int i = 0; i < 100; i++)
+    if ( rank == 0 )    
     {
-        if ( rank == 0 )    std::cout<<elapsed[i]<<std::endl;
+        std::cout<<init_timer<<std::endl;
+
+        for (int i = 0; i < 50; i++)
+        {
+            std::cout<<elapsed[i]<<std::endl;
+        }
     }
 
     MPI_Finalize();

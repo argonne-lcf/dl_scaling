@@ -1,8 +1,13 @@
-import torch.nn.parallel
-import intel_extension_for_pytorch  # Added Extra
-import datetime
+from time import perf_counter_ns
 import sys
+
+
+t1 = perf_counter_ns() 
+import intel_extension_for_pytorch  # Added Extra
+import torch.nn.parallel
 from mpi4py import MPI
+t2 = perf_counter_ns() 
+import_timer = t2 - t1
 
 comm = MPI.COMM_WORLD
 mpi_size = comm.Get_size()
@@ -22,17 +27,19 @@ MPI.COMM_WORLD.Barrier()
 
 elapsed1=[]
 
-for _ in range(100):
+for _ in range(50):
     x = torch.ones([1, dim_size],dtype=torch.float32).to(device, non_blocking=True)
     # print(x)
     y = torch.empty((1,dim_size),dtype=torch.float32)
-    t4 = datetime.datetime.now() 
+    t5 = perf_counter_ns() 
     comm.Allreduce(x, y, op=MPI.SUM)
-    t5 = datetime.datetime.now()
+    MPI.COMM_WORLD.Barrier()
+    t6 = perf_counter_ns() 
     # print(y)
-    elapsed = (t5 - t4).total_seconds() * 10**6
-    elapsed1.append(elapsed)
+    elapsed1.append(t6 - t5)
 
 if comm.Get_rank() == 0:
+    print(import_timer)
+
     for e in elapsed1:
         print(e)

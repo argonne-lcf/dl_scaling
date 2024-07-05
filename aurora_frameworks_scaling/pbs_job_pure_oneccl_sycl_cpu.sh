@@ -43,3 +43,4 @@ NRANKS=$(( NNODES * RANKS_PER_NODE ))
 done
 
 # For CPU only, --backend host --sycl_dev_type host
+# For CCL_WORKER_COUNT + 1, choose CCL_WORKER_AFFINITY different from CPU binding 
