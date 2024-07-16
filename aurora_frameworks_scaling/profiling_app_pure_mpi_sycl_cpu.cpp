@@ -1,6 +1,6 @@
 // module use /soft/modulefiles
-// module load frameworks/2023.12.15.001 
-// mpic++ -o sycl_cpu sycl_cpu.cpp -fsycl -lmpi -I/opt/aurora/23.275.2/oneapi/compiler/2024.0/include/sycl
+// module load frameworks
+// mpic++ -o sycl_cpu sycl_cpu.cpp -fsycl -lmpi -I/opt/aurora/24.086.0/oneapi/compiler/2024.1/include/sycl/
 // mpirun -np 2 -ppn 2 ./sycl_gpu
 // export ONEAPI_DEVICE_SELECTOR=opencl:cpu
 
@@ -15,11 +15,11 @@ int main(int argc, char** argv)
     int rank;
     double t1, t2, t3, t4, init_timer;
 
-    t1 = MPI_Wtime();
+    std::chrono::time_point<std::chrono::high_resolution_clock> start = std::chrono::high_resolution_clock::now();
     MPI_Init(&argc, &argv);
-    t2 = MPI_Wtime();
-    if ( rank == 0 )    init_timer=( t2 - t1 ) * 1e6;
-
+    std::chrono::time_point<std::chrono::high_resolution_clock> end = std::chrono::high_resolution_clock::now();
+    MPI_Barrier( MPI_COMM_WORLD ); 
+ 
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     sycl::queue Q(sycl::cpu_selector_v);
     
@@ -27,7 +27,7 @@ int main(int argc, char** argv)
     int  global_range;
     if (argc == 2)  
     {
-       global_range = atoi(argv[1])/4;
+       global_range = atoi(argv[1]);
     }
     else
     {
@@ -57,8 +57,6 @@ int main(int argc, char** argv)
 
     if ( rank == 0 )    
     {
-        std::cout<<init_timer<<std::endl;
-
         for (int i = 0; i < 50; i++)
         {
             std::cout<<elapsed[i]<<std::endl;
