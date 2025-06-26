@@ -22,11 +22,13 @@ std::vector<int> get_nearest_neighbors(int rank, int size)
         }
     }
 
-    std::cout << "Rank " << rank << " neighbor list: ";
-    for (int n : neighbors) {
-        std::cout << n << " ";
+    if (size < 100) {
+        std::cout << "Rank " << rank << " neighbor list: ";
+        for (int n : neighbors) {
+            std::cout << n << " ";
+        }
+        std::cout << std::endl;
     }
-    std::cout << std::endl;
     return neighbors;
 }
 
@@ -96,15 +98,17 @@ int main(int argc, char** argv)
             }
         }
     }
-    std::cout << "Rank " << rank << " sending " << global_send_elements << " elements" << std::endl;
-    fflush(stdout);
+    if (size < 100) {
+        std::cout << "Rank " << rank << " sending " << global_send_elements << " elements" << std::endl;
+        fflush(stdout);
+    }
     MPI_Barrier( MPI_COMM_WORLD );
 
     // Get the received data
     int global_rcv_elements = 0;
     MPI_Alltoall(send_counts.data(), 1, MPI_INT, rcv_counts.data(), 1, MPI_INT, MPI_COMM_WORLD);
     for (int i = 0; i < size; i++) {
-        if (rcv_counts[i] != 0) {
+        if (rcv_counts[i] != 0 and size < 100) {
                 std::cout << "Rank " << rank << " receives " << rcv_counts[i] <<
                           " elements from rank " << i << std::endl;
         }

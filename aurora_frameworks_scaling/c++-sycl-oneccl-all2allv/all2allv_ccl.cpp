@@ -23,11 +23,13 @@ std::vector<int> get_nearest_neighbors(int rank, int size)
         }
     }
 
-    std::cout << "Rank " << rank << " neighbor list: ";
-    for (int n : neighbors) {
-        std::cout << n << " ";
+    if (size < 100) {
+        std::cout << "Rank " << rank << " neighbor list: ";
+        for (int n : neighbors) {
+            std::cout << n << " ";
+        }
+        std::cout << std::endl;
     }
-    std::cout << std::endl;
     return neighbors;
 }
 
@@ -49,7 +51,21 @@ int main(int argc, char** argv)
  
     MPI_Comm_size(MPI_COMM_WORLD, &size);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    sycl::queue Q(sycl::gpu_selector_v);
+    
+    /* create sycl queue */
+    std::vector<sycl::device> gpu_devices;
+    for (const auto& dev : sycl::device::get_devices()) {
+        if (dev.is_gpu()) {
+            gpu_devices.push_back(dev);
+        }
+    }
+    if (gpu_devices.empty()) {
+        std::cerr << "No GPU devices found!\n";
+        MPI_Abort(MPI_COMM_WORLD, 1);
+    }
+    sycl::device selected_device = gpu_devices[rank % gpu_devices.size()];
+    sycl::queue Q(selected_device);
+    //sycl::queue Q(sycl::gpu_selector_v);
     
     /* create kvs */
     ccl::shared_ptr_class<ccl::kvs> kvs;
@@ -72,7 +88,9 @@ int main(int argc, char** argv)
     /* create stream */
     auto stream = ccl::create_stream(Q);
 
-    std::cout << "Rank " << rank << " running on " << Q.get_device().get_info<sycl::info::device::name>()  << std::endl;
+    if (size < 100) {
+        std::cout << "Rank " << rank << " running on " << Q.get_device().get_info<sycl::info::device::name>()  << std::endl;
+    }
     int  elements_per_proc;
     int elements_per_proc_other;
     if (argc == 3)  
@@ -120,8 +138,10 @@ int main(int argc, char** argv)
             }
         }
     }
-    std::cout << "Rank " << rank << " sending " << global_send_elements << " elements" << std::endl;
-    fflush(stdout);
+    if (size < 100) {
+        std::cout << "Rank " << rank << " sending " << global_send_elements << " elements" << std::endl;
+        fflush(stdout);
+    }
     MPI_Barrier( MPI_COMM_WORLD );
 
     // Get the received data
@@ -130,7 +150,7 @@ int main(int argc, char** argv)
                  rcv_counts.data(), 1, MPI_UNSIGNED_LONG, 
                  MPI_COMM_WORLD);
     for (int i = 0; i < size; i++) {
-        if (rcv_counts[i] != 0) {
+        if (rcv_counts[i] != 0 and size < 100) {
                 std::cout << "Rank " << rank << " receives " << rcv_counts[i] <<
                           " elements from rank " << i << std::endl;
         }
